@@ -1954,8 +1954,7 @@
                 margin-bottom: 7px;
             }
 
-            .form-field input,
-            .form-field select {
+            .form-field input {
                 width: 100%;
                 background: rgba(255, 255, 255, 0.07);
                 border: 1.5px solid rgba(255, 255, 255, 0.12);
@@ -1968,6 +1967,26 @@
                 font-family: inherit;
             }
 
+            .form-field select {
+                width: 100%;
+                background: var(--cream);
+                border: 1.5px solid rgba(255, 255, 255, 0.12);
+                color: var(--rust);
+                padding: 11px 14px;
+                border-radius: 10px;
+                font-size: 0.88rem;
+                outline: none;
+                transition: border-color 0.2s;
+                font-family: inherit;
+                font-weight: 600;
+            }
+
+            .form-field select option {
+                background: var(--cream);
+                color: var(--rust);
+                font-weight: 600;
+            }
+
             .form-field input:focus,
             .form-field select:focus {
                 border-color: var(--saffron);
@@ -1977,12 +1996,7 @@
                 color: rgba(255, 255, 255, 0.25);
             }
 
-            .tax-note {
-                font-size: 0.72rem;
-                color: rgba(255, 255, 255, 0.3);
-                text-align: center;
-                margin-top: 12px;
-            }
+
 
             /* ══════════════════════════════════════
        GALLERY
@@ -5421,14 +5435,29 @@
                             <label class="lang-hi-inline">सेवा का उद्देश्य</label><label class="lang-gu-inline">સેવાનો
                                 હેતુ</label>
                             <label class="lang-en-inline">Seva Purpose</label>
-                            <select>
-                                <option class="lang-hi">चारा सेवा (Fodder Seva)</option>
-                                <option class="lang-gu">ચારો સેવા (Fodder Seva)</option>
+                            <select class="lang-hi">
+                                <option>चारा सेवा (Fodder Seva)</option>
                                 <option>चिकित्सा सेवा (Medical Treatment)</option>
                                 <option>गाय गोद (Adopt a Cow)</option>
                                 <option>शेड निर्माण (Shed Construction)</option>
                                 <option>गौ पूजा (Gau Puja)</option>
                                 <option>सामान्य सेवा (General Seva)</option>
+                            </select>
+                            <select class="lang-gu">
+                                <option>ચારો સેવા (Fodder Seva)</option>
+                                <option>તબીબી સેવા (Medical Treatment)</option>
+                                <option>ગાય દત્તક (Adopt a Cow)</option>
+                                <option>શેડ નિર્માણ (Shed Construction)</option>
+                                <option>ગૌ પૂજા (Gau Puja)</option>
+                                <option>સામાન્ય સેવા (General Seva)</option>
+                            </select>
+                            <select class="lang-en">
+                                <option>Fodder Seva</option>
+                                <option>Medical Treatment</option>
+                                <option>Adopt a Cow</option>
+                                <option>Shed Construction</option>
+                                <option>Gau Puja</option>
+                                <option>General Seva</option>
                             </select>
                         </div>
                         <button class="btn-primary" onclick="showPaymentQR()"
@@ -5437,64 +5466,7 @@
                                 કાર્ડ દ્વારા દાન કરો</span>
                             <span class="lang-en-inline">Donate via UPI / Card</span>
                         </button>
-                        <!-- UPI & QR Payment Box -->
-                        <div class="payment-qr-card" id="payment-qr-block">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--rust); margin-bottom: 6px;">
-                                <span class="lang-hi-inline">स्कैन करके दान करें</span><span
-                                    class="lang-gu-inline">સ્કેન કરીને દાન કરો</span>
-                                <span class="lang-en-inline">Scan &amp; Pay to Donate</span>
-                            </h4>
-                            <p style="font-size: 0.72rem; color: var(--text-mid); margin-bottom: 10px;">
-                                <span class="lang-hi-inline">किसी भी UPI ऐप (GPay, PhonePe, Paytm) से स्कैन
-                                    करें:</span><span class="lang-gu-inline">કોઈપણ UPI એપ (GPay, PhonePe, Paytm) થી
-                                    સ્કેન કરો:</span>
-                                <span class="lang-en-inline">Scan using any UPI app (GPay, PhonePe, Paytm):</span>
-                            </p>
-                            <!-- QR Code SVG -->
-                            <div class="qr-code-svg">
-                                <svg shape-rendering="crispEdges" viewbox="0 0 29 29"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 0h29v29H0z" fill="#ffffff"></path>
-                                    <path
-                                        d="M0 0h7v7H0zm22 0h7v7h-7zM0 22h7v7H0zm9 0h1v1H9zm1-1h1v1h-1zm1 1h1v1h-1zm1-1h1v1h-1zm1 1h1v1h-1zm1-1h1v1h-1zm1 1h1v1h-1zm1-1h1v1h-1zm1 1h1v1h-1zm1-1h1v1h-1zm1 1h1v1h-1zm-10-2h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-9-1h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-10-2h1v1h-1zm1-1h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-9-1h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-10-2h1v1h-1zm1-1h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-9-1h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-10-2h1v1h-1zm1-1h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-9-1h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-16 1h1v1H6zm2 0h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-16 2h1v1H6zm2 0h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-15-1h1v1H7zm2 0h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm-15-2h1v1H7zm2 0h1v1H9zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1z"
-                                        fill="#000000"></path>
-                                </svg>
-                            </div>
-                            <!-- Amount Display -->
-                            <div style="font-weight: 700; color: var(--text-dark); margin: 6px 0; font-size: 1.05rem;">
-                                <span class="lang-hi-inline">राशि: ₹<span id="qr-amount-hi">101</span></span><span
-                                    class="lang-gu-inline">રકમ: ₹<span id="qr-amount-gu">101</span></span>
-                                <span class="lang-en-inline">Amount: ₹<span id="qr-amount-en">101</span></span>
-                            </div>
-                            <!-- UPI Copy Row -->
-                            <div class="upi-copy-container">
-                                <span class="upi-id-text" id="upi-id">info@gausutaanjaliji.org</span>
-                                <button class="upi-copy-btn" onclick="copyUPI()" type="button">
-                                    <span class="lang-hi-inline">कॉपी 📋</span><span class="lang-gu-inline">કોપી
-                                        📋</span>
-                                    <span class="lang-en-inline">Copy 📋</span>
-                                </button>
-                            </div>
-                            <div class="copied-tooltip" id="copied-msg">
-                                <span>✓</span>
-                                <span class="lang-hi-inline">UPI आईडी कॉपी हो गई है!</span><span
-                                    class="lang-gu-inline">UPI આઈડી કોપી થઈ ગયું છે!</span>
-                                <span class="lang-en-inline">UPI ID Copied to Clipboard!</span>
-                            </div>
-                            <!-- WhatsApp confirmation instruction -->
-                            <p style="font-size: 0.7rem; color: var(--text-light); margin-top: 14px; line-height: 1.5;">
-                                <span class="lang-hi-inline">⚠️ भुगतान के बाद रसीद प्राप्त करने के लिए स्क्रीनशॉट
-                                    व्हाट्सएप <strong>8368703510</strong> पर भेजें।</span><span
-                                    class="lang-gu-inline">⚠️ ચુકવણી કર્યા પછી રસીદ મેળવવા માટે સ્ક્રીનશોટ વોટ્સએપ
-                                    8368703510 પર મોકલો.</span>
-                                <span class="lang-en-inline">⚠️ After payment, please share the screenshot on WhatsApp
-                                    at <strong>8368703510</strong> for receipt.</span>
-                            </p>
-                        </div>
-                        <p class="tax-note lang-hi-inline">80G कर छूट प्रमाण पत्र दिया जाएगा  •  100% पारदर्शी
-                        </p>
-                        <p class="tax-note lang-en-inline">80G Tax Exemption Certificate Provided  •  100%
-                            Transparent</p>
+
                     </div>
                 </div>
             </div>
@@ -6421,14 +6393,17 @@
             function showPaymentQR() {
                 const amountInput = document.getElementById('donate-amount');
                 const amount = amountInput ? amountInput.value : '101';
+                const upiId = 'info@gausutaanjaliji.org';
+                const upiLink = `upi://pay?pa=${upiId}&pn=Gaushala%20Ramdevra&am=${amount}&cu=INR`;
 
-                document.getElementById('qr-amount-hi').innerText = amount;
-                document.getElementById('qr-amount-en').innerText = amount;
-
-                const qrBlock = document.getElementById('payment-qr-block');
-                if (qrBlock) {
-                    qrBlock.style.display = 'block';
-                    qrBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    window.location.href = upiLink;
+                } else {
+                    navigator.clipboard.writeText(upiId).then(() => {
+                        alert(`UPI ID (${upiId}) has been copied to your clipboard!\n\nPlease paste it in your UPI app (GPay, PhonePe, Paytm, etc.) to complete the donation of ₹${amount}.`);
+                    }).catch(err => {
+                        alert(`Please make payment of ₹${amount} to UPI ID: ${upiId}`);
+                    });
                 }
             }
 
