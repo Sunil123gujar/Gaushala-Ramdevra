@@ -3034,7 +3034,98 @@
                     padding: 20px;
                 }
             }
-        </style>
+        
+      /* --- CUSTOM THEME-COMPLIANT LANG DROPDOWN --- */
+      .custom-lang-dropdown {
+        position: relative;
+        display: none; /* Hidden on desktop by default */
+        z-index: 1000;
+        order: 3 !important;
+        margin: 0 10px 0 0 !important;
+      }
+
+      .custom-lang-btn {
+        background: rgba(30, 15, 2, 0.95) !important;
+        border: 1px solid var(--gold) !important;
+        border-radius: 6px !important;
+        color: var(--light-gold) !important;
+        padding: 5px 10px !important;
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        transition: all 0.2s !important;
+        height: 28px !important;
+        box-sizing: border-box !important;
+      }
+
+      .custom-lang-btn:hover {
+        background: rgba(212, 146, 10, 0.25) !important;
+        border-color: var(--light-gold) !important;
+      }
+
+      .custom-lang-btn .arrow {
+        font-size: 0.55rem !important;
+        color: var(--gold) !important;
+        transition: transform 0.2s !important;
+      }
+
+      .custom-lang-options {
+        display: none;
+        position: absolute;
+        top: calc(100% + 4px);
+        right: 0;
+        background: #2C1A06 !important;
+        border: 1px solid var(--gold) !important;
+        border-radius: 6px !important;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+        width: 100px !important;
+        overflow: hidden !important;
+        animation: langDropdownSlide 0.2s ease-out !important;
+        z-index: 2000 !important;
+      }
+
+      .custom-lang-options.show {
+        display: block !important;
+      }
+
+      .custom-lang-option {
+        color: var(--light-gold) !important;
+        padding: 9px 12px !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        transition: all 0.2s !important;
+        text-align: left !important;
+        border-bottom: 1px solid rgba(212, 146, 10, 0.1) !important;
+      }
+
+      .custom-lang-option:last-child {
+        border-bottom: none !important;
+      }
+
+      .custom-lang-option:hover {
+        background: rgba(212, 146, 10, 0.2) !important;
+        color: var(--white) !important;
+      }
+
+      @keyframes langDropdownSlide {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 768px) {
+        .custom-lang-dropdown {
+          display: inline-block !important;
+        }
+        .lang-select {
+          display: none !important; /* Hide old native dropdown */
+        }
+      }
+
+    </style>
 </head>
 <body>
 <!-- TOP STRIP -->
@@ -3090,11 +3181,17 @@
 <button class="lang-btn" id="btn-gu" onclick="setLang('gu')">ગુજરાતી</button>
 <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
 </div>
-<select aria-label="Select Language" class="lang-select" onchange="setLang(this.value)">
-<option value="hi">हिंदी</option>
-<option value="gu">ગુજરાતી</option>
-<option value="en">English</option>
-</select>
+<div class="custom-lang-dropdown">
+          <button class="custom-lang-btn" onclick="toggleCustomLangDropdown(event)" type="button">
+            <span class="current-lang-text">हिंदी</span>
+            <span class="arrow">▼</span>
+          </button>
+          <div class="custom-lang-options">
+            <div class="custom-lang-option" onclick="changeLangCustom('hi')">हिंदी</div>
+            <div class="custom-lang-option" onclick="changeLangCustom('gu')">ગુજરાતી</div>
+            <div class="custom-lang-option" onclick="changeLangCustom('en')">English</div>
+          </div>
+        </div>
 <button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">☰</button>
 </nav>
 </header>
@@ -3781,7 +3878,17 @@
                 const langSelect = document.querySelector('.lang-select');
                 if (langSelect) langSelect.value = lang;
 
-                localStorage.setItem('gaushala-lang', lang);
+                try {
+                    localStorage.setItem('gaushala-lang', lang);
+                } catch (e) {
+                    console.warn('localStorage access failed:', e);
+                }
+                const langNames = { hi: 'हिंदी', gu: 'ગુજરાતી', en: 'English' };
+                const btnText = document.querySelector('.current-lang-text');
+                if (btnText) {
+                    btnText.textContent = langNames[lang];
+                }
+
 
                 // Swap numbers on all elements with data-hi / data-en / data-gu attributes
                 document.querySelectorAll('[data-hi][data-en]').forEach(el => {
@@ -3796,10 +3903,53 @@
             }
 
             // Restore saved lang
-            const saved = localStorage.getItem('gaushala-lang');
+            let saved = null;
+            try {
+                saved = localStorage.getItem('gaushala-lang');
+            } catch (e) {
+                console.warn('localStorage access failed:', e);
+            }
             if (saved) setLang(saved);
 
-            function toggleMenu() {
+            
+      // Custom Language Dropdown Toggle Functions
+      function toggleCustomLangDropdown(event) {
+        event.stopPropagation();
+        const options = document.querySelector('.custom-lang-options');
+        if (options) {
+          options.classList.toggle('show');
+          const arrow = document.querySelector('.custom-lang-btn .arrow');
+          if (arrow) {
+            arrow.style.transform = options.classList.contains('show') ? 'rotate(180deg)' : '';
+          }
+        }
+      }
+
+      function changeLangCustom(lang) {
+        setLang(lang);
+        const options = document.querySelector('.custom-lang-options');
+        if (options) {
+          options.classList.remove('show');
+          const arrow = document.querySelector('.custom-lang-btn .arrow');
+          if (arrow) {
+            arrow.style.transform = '';
+          }
+        }
+      }
+
+      // Close dropdown on click outside
+      document.addEventListener('click', function(event) {
+        const options = document.querySelector('.custom-lang-options');
+        if (options && options.classList.contains('show')) {
+          options.classList.remove('show');
+          const arrow = document.querySelector('.custom-lang-btn .arrow');
+          if (arrow) {
+            arrow.style.transform = '';
+          }
+        }
+      });
+
+      function toggleMenu() {
                 const navLinks = document.querySelector('.nav-links');
                 const menuToggle = document.querySelector('.menu-toggle');
                 if (!navLinks || !menuToggle) return;
