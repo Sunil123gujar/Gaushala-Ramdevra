@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        :root {
+            --saffron: #E8600A;
+            --deep-saffron: #C04A00;
+            --gold: #D4920A;
+            --light-gold: #F5C842;
+            --pale-gold: #FDE68A;
+            --ivory: #FDF6E8;
+            --cream: #FFF9F0;
+            --rust: #8B3A0F;
+            --dark-earth: #1E0F02;
+            --mid-earth: #4A2808;
+            --green-pasture: #1E5C2A;
+            --light-green: #3A8048;
+            --sky: #C7E8F5;
+            --white: #FFFFFF;
+            --text-dark: #1A0E03;
+            --text-mid: #4A3520;
+            --text-light: #8A6A40;
+            --border: #E8D5B0;
+            --border-light: #F3E8CC;
+            --gradient-primary: linear-gradient(135deg, #FF9F43 0%, #E8600A 100%);
+            --gradient-gold-saffron: linear-gradient(135deg, #F5C842 0%, #E8600A 100%);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+        }
+
+        /* Language Display Logic */
+        .lang-en,
+        .lang-gu,
+        .lang-en-inline,
+        .lang-gu-inline {
+            display: none !important;
+        }
+
+        .lang-hi {
+            display: block !important;
+        }
+
+        .lang-hi-inline {
+            display: inline !important;
+        }
+
+        html[data-lang="en"] .lang-en {
+            display: block !important;
+        }
+
+        html[data-lang="en"] .lang-hi,
+        html[data-lang="en"] .lang-gu {
+            display: none !important;
+        }
+
+        html[data-lang="en"] .lang-en-inline {
+            display: inline !important;
+        }
+
+        html[data-lang="en"] .lang-hi-inline,
+        html[data-lang="en"] .lang-gu-inline {
+            display: none !important;
+        }
+
+        html[data-lang="gu"] .lang-gu {
+            display: block !important;
+        }
+
+        html[data-lang="gu"] .lang-hi,
+        html[data-lang="gu"] .lang-en {
+            display: none !important;
+        }
+
+        html[data-lang="gu"] .lang-gu-inline {
+            display: inline !important;
+        }
+
+        html[data-lang="gu"] .lang-hi-inline,
+        html[data-lang="gu"] .lang-en-inline {
+            display: none !important;
+        }
+
+        /* Top Strip */
+        .top-strip {
+            background: var(--dark-earth);
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            font-size: 0.76rem;
+            padding: 6px 20px;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(245, 200, 66, 0.2);
+        }
+
+        .top-strip strong {
+            color: var(--light-gold);
+        }
+
+        /* Header & Nav */
+        header {
+            background: rgba(30, 15, 2, 0.88);
+            backdrop-filter: blur(18px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1.5px solid var(--saffron);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1.5px solid rgba(212, 146, 10, 0.4);
+            color: var(--light-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 8px;
+            order: 3;
+            transition: all 0.2s;
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-circle {
+            width: 58px;
+            height: 58px;
+            background: url("images/713243525_17910887376412066_1305894646775976050_n.jpg") center/cover no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 0 0 0 2px rgba(212, 146, 10, 0.5), 0 0 18px rgba(212, 146, 10, 0.35);
+        }
+
+        .logo-text .name {
+            font-family: "Yatra One", cursive;
+            font-size: 1.32rem;
+            color: var(--light-gold);
+            line-height: 1.2;
+            display: block;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.72);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            height: 38px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:not(.nav-donate):hover,
+        .nav-links a:not(.nav-donate):focus,
+        .nav-links a:not(.nav-donate):active {
+            color: var(--light-gold) !important;
+            outline: none;
+        }
+
+        .nav-links a:visited {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .nav-links a.nav-donate:visited {
+            color: white !important;
+        }
+
+        .nav-links a:not(.nav-donate)::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 14px;
+            right: 14px;
+            height: 1.5px;
+            background-color: var(--light-gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:not(.nav-donate):hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-links a:not(.nav-donate).active-nav::after {
+            transform: scaleX(1);
+        }
+
+        .nav-links a:not(.nav-donate).active-nav {
+            color: var(--light-gold) !important;
+        }
+
+        /* Nav Donate Button */
+        .nav-donate {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            padding: 6px 22px 6px 6px !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            font-size: 0.98rem !important;
+            /* Increased to align with larger nav links */
+            box-shadow: 0 4px 15px rgba(232, 96, 10, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            letter-spacing: 0.03em;
+            position: relative;
+            overflow: hidden;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+            mask-image: radial-gradient(white, black);
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .nav-donate .btn-text {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .heart-circle {
+            width: 26px;
+            height: 26px;
+            background-color: #ffffff;
+            color: #e31b23;
+            /* Premium vibrant red */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            flex-shrink: 0;
+            margin-right: 8px;
+            /* Fixed spacing on the left */
+        }
+
+
+        .heart-svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+            display: block;
+            flex-shrink: 0;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .nav-donate:hover .heart-svg {
+            transform: scale(1.3);
+            /* Heart icon grows on hover */
+        }
+
+        .nav-donate:hover {
+            transform: translateY(-2px) scale(1.04) !important;
+            box-shadow: 0 8px 24px rgba(232, 96, 10, 0.55) !important;
+            background: linear-gradient(135deg, #e8600a 0%, #ff9f43 100%) !important;
+            color: white !important;
+        }
+
+        .nav-donate:active {
+            transform: translateY(0) scale(0.98) !important;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1.5px solid rgba(212, 146, 10, 0.25);
+            border-radius: 30px;
+            padding: 4px;
+            gap: 4px;
+            flex-shrink: 0;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+            margin-right: -15px;
+            /* Shift language toggle slightly to the right on desktop */
+        }
+
+        .lang-toggle:hover {
+            border-color: rgba(232, 96, 10, 0.4);
+            box-shadow: 0 0 12px rgba(232, 96, 10, 0.15);
+        }
+
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 24px;
+            font-size: 0.78rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .lang-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-gold-saffron);
+            color: white;
+            box-shadow: 0 2px 10px rgba(232, 96, 10, 0.4);
+        }
+
+        .lang-select {
+            display: none;
+        }
+
+        /* Responsive Nav */
+        @media (max-width: 768px) {
+                nav {
+                    display: flex !important;
+                    justify-content: space-between !important;
+                    align-items: center !important;
+                    padding: 8px 10px !important; /* Shrunk padding */
+                    position: relative !important;
+                    width: 100% !important;
+                    gap: 6px !important;
+                }
+
+                .logo {
+                    order: 2 !important;
+                    position: static !important;
+                    transform: none !important;
+                    margin-inline: auto !important;
+                    display: flex !important;
+                    justify-content: center !important;
+                    text-align: center !important;
+                    flex-grow: 1 !important;
+                }
+
+                .logo-circle {
+                    display: none !important;
+                }
+
+                .logo-text {
+                    max-width: 200px !important; /* Slightly shrunk */
+                    text-align: center !important;
+                }
+
+                .logo-text .name {
+                    font-size: 0.85rem !important; /* Shrunk font size to prevent overflow */
+                    white-space: nowrap !important;
+                }
+
+                .logo-text .tagline {
+                    font-size: 0.48rem !important; /* Shrunk tagline font size */
+                    display: block;
+                    white-space: normal !important;
+                }
+
+                .menu-toggle {
+                    display: block !important;
+                    order: 1 !important;
+                    margin: 0 !important;
+                    font-size: 1.2rem !important; /* Shrunk menu toggle */
+                    padding: 4px 8px !important; /* Shrunk menu toggle padding */
+                }
+
+                .lang-select {
+                    display: block !important;
+                    order: 3 !important;
+                    width: 70px !important;
+                    max-width: 70px !important;
+                    height: 28px !important;
+                    background: rgba(30, 15, 2, 0.95) !important;
+                    border: 1px solid var(--gold) !important;
+                    border-radius: 4px !important;
+                    color: var(--light-gold) !important;
+                    padding: 2px 14px 2px 4px !important;
+                    font-size: 0.7rem !important;
+                    font-weight: 700 !important;
+                    cursor: pointer !important;
+                    outline: none !important;
+                    appearance: none !important;
+                    -webkit-appearance: none !important;
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5C842' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+                    background-repeat: no-repeat !important;
+                    background-position: right 4px center !important;
+                    background-size: 8px !important;
+                    margin: 0 20px 0 0 !important;
+                    direction: rtl !important;
+                }
+
+                .lang-select option {
+                    background: #2C1A06 !important;
+                    color: var(--light-gold) !important;
+                    font-weight: 600 !important;
+                    font-size: 0.7rem !important;
+                    direction: ltr !important;
+                }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(180deg, #2C1A06 0%, var(--dark-earth) 100%);
+                padding: 20px;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <body>
+        <!-- TOP STRIP -->
+        <div class="top-strip">
+            🕉️ &nbsp;
+            <span class="lang-hi-inline"><strong>जय बाबा रामदेव जी</strong> &nbsp;•&nbsp; 24/7 गौ सेवा जारी है — जय बाबा
+                रामदेव गौसेवा समिति गौशाला रामदेवरा, राजस्थान &nbsp;•&nbsp; दान करें: <strong>📞 +91 94142
+                    87654</strong></span>
+            <span class="lang-gu-inline"><strong>જય બાબા રામદેવ જી</strong> &nbsp;•&nbsp; ૨૪/૭ ગૌ સેવા ચાલુ છે — જય બાબા
+                રામદેવ ગૌસેવા સમિતિ ગૌશાળા રામદેવરા, રાજસ્થાન &nbsp;•&nbsp; દાન કરો: <strong>📞 +91 94142
+                    87654</strong></span>
+            <span class="lang-en-inline"><strong>Jai Baba Ramdev Ji</strong> &nbsp;•&nbsp; 24/7 Gau Seva — Ramdevra,
+                Pokaran, Rajasthan &nbsp;•&nbsp; Donate: <strong>📞 +91 94142 87654</strong></span>
+            &nbsp; 🕉️
+        </div>
+
+        <!-- HEADER -->
+        <header>
+      <nav>
+        <a class="logo" href="#">
+          <div class="logo-circle"></div>
+          <div class="logo-text">
+            <span class="name lang-hi">जय बाबा रामदेव गौसेवा समिति</span>
+            <span class="name lang-gu">જય બાબા રામદેવ ગૌસેવા સમિતિ</span>
+            <span class="name lang-en">Jai Baba Ramdev Gauseva Samiti</span>
+            <span class="tagline lang-hi">गौशाला रामदेवरा, राजस्थान</span>
+            <span class="tagline lang-gu">ગૌશાળા રામદેવરા, રાજસ્થાન</span>
+            <span class="tagline lang-en">Gaushala Ramdevra, Rajasthan</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="template_Guashala.html"><span class="lang-hi-inline">होम पेज</span>
+              <span class="lang-gu-inline">હોમ
+                પેજ</span><span class="lang-en-inline">Home Page</span></a></li>
+          <li><a href="about.html"><span class="lang-hi-inline">हमारे बारे में</span><span class="lang-gu-inline">અમારા
+                વિશે</span><span class="lang-en-inline">About Us</span></a>
+          </li>
+          <li><a href="Our_Work.html"><span class="lang-hi-inline">हमारे कार्य</span><span class="lang-gu-inline">અમારા
+                કાર્યો</span><span class="lang-en-inline">Our
+                Work</span></a></li>
+          <li><a href="transprancy.html"><span class="lang-hi-inline">पारदर्शिता
+              </span><span class="lang-gu-inline">પારદર્શિતા
+              </span><span class="lang-en-inline">Transparency
+              </span></a></li>
+          <li><a href="contact.html" class="active-nav"><span class="lang-hi-inline">संपर्क करें</span><span
+                class="lang-gu-inline">સંપર્ક
+                કરો</span><span class="lang-en-inline">Contact
+                Us</span></a></li>
+          <li><a href="template_Guashala.html#donate" class="nav-donate"><span class="heart-circle"><svg class="heart-svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg></span><span class="btn-text"><span class="lang-hi-inline">दान करें</span><span
+                  class="lang-gu-inline">દાન કરો</span><span class="lang-en-inline">Donate</span></span></a></li>
+        </ul>
+
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-hi" onclick="setLang('hi')">हिंदी</button>
+          <button class="lang-btn" id="btn-gu" onclick="setLang('gu')">ગુજરાતી</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+
+        <select class="lang-select" onchange="setLang(this.value)" aria-label="Select Language">
+          <option value="hi" selected>हिंदी</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="en">English</option>
+        </select>
+
+        <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      </nav>
+    </header>
+
+        <script>
+            // Language Toggle
+            function setLang(lang) {
+                document.documentElement.setAttribute('data-lang', lang);
+                const btnHi = document.getElementById('btn-hi');
+                const btnEn = document.getElementById('btn-en');
+                const btnGu = document.getElementById('btn-gu');
+                if (btnHi) btnHi.classList.toggle('active', lang === 'hi');
+                if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+                if (btnGu) btnGu.classList.toggle('active', lang === 'gu');
+                const langSelect = document.querySelector('.lang-select');
+                if (langSelect) langSelect.value = lang;
+                localStorage.setItem('gaushala-lang', lang);
+            }
+
+            // Mobile Menu Toggle
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+                const menuToggle = document.querySelector('.menu-toggle');
+                if (navLinks.classList.contains('active')) {
+                    menuToggle.textContent = '✕';
+                } else {
+                    menuToggle.textContent = '☰';
+                }
+            }
+        </script>
+    </body>
+
+</html>
