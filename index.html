@@ -3943,98 +3943,107 @@
                     font-size: 0.72rem !important;
                 }
             }
-        
-      /* --- CUSTOM THEME-COMPLIANT LANG DROPDOWN --- */
-      .custom-lang-dropdown {
-        position: relative;
-        display: none; /* Hidden on desktop by default */
-        z-index: 1000;
-        order: 3 !important;
-        margin: 0 10px 0 0 !important;
-      }
 
-      .custom-lang-btn {
-        background: rgba(30, 15, 2, 0.95) !important;
-        border: 1px solid var(--gold) !important;
-        border-radius: 6px !important;
-        color: var(--light-gold) !important;
-        padding: 5px 10px !important;
-        font-size: 0.72rem !important;
-        font-weight: 700 !important;
-        cursor: pointer !important;
-        display: flex !important;
-        align-items: center !important;
-        gap: 6px !important;
-        transition: all 0.2s !important;
-        height: 28px !important;
-        box-sizing: border-box !important;
-      }
+            /* --- CUSTOM THEME-COMPLIANT LANG DROPDOWN --- */
+            .custom-lang-dropdown {
+                position: relative;
+                display: none;
+                /* Hidden on desktop by default */
+                z-index: 1000;
+                order: 3 !important;
+                margin: 0 10px 0 0 !important;
+            }
 
-      .custom-lang-btn:hover {
-        background: rgba(212, 146, 10, 0.25) !important;
-        border-color: var(--light-gold) !important;
-      }
+            .custom-lang-btn {
+                background: rgba(30, 15, 2, 0.95) !important;
+                border: 1px solid var(--gold) !important;
+                border-radius: 6px !important;
+                color: var(--light-gold) !important;
+                padding: 5px 10px !important;
+                font-size: 0.72rem !important;
+                font-weight: 700 !important;
+                cursor: pointer !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+                transition: all 0.2s !important;
+                height: 28px !important;
+                box-sizing: border-box !important;
+            }
 
-      .custom-lang-btn .arrow {
-        font-size: 0.55rem !important;
-        color: var(--gold) !important;
-        transition: transform 0.2s !important;
-      }
+            .custom-lang-btn:hover {
+                background: rgba(212, 146, 10, 0.25) !important;
+                border-color: var(--light-gold) !important;
+            }
 
-      .custom-lang-options {
-        display: none;
-        position: absolute;
-        top: calc(100% + 4px);
-        right: 0;
-        background: #2C1A06 !important;
-        border: 1px solid var(--gold) !important;
-        border-radius: 6px !important;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
-        width: 100px !important;
-        overflow: hidden !important;
-        animation: langDropdownSlide 0.2s ease-out !important;
-        z-index: 2000 !important;
-      }
+            .custom-lang-btn .arrow {
+                font-size: 0.55rem !important;
+                color: var(--gold) !important;
+                transition: transform 0.2s !important;
+            }
 
-      .custom-lang-options.show {
-        display: block !important;
-      }
+            .custom-lang-options {
+                display: none;
+                position: absolute;
+                top: calc(100% + 4px);
+                right: 0;
+                background: #2C1A06 !important;
+                border: 1px solid var(--gold) !important;
+                border-radius: 6px !important;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+                width: 100px !important;
+                overflow: hidden !important;
+                animation: langDropdownSlide 0.2s ease-out !important;
+                z-index: 2000 !important;
+            }
 
-      .custom-lang-option {
-        color: var(--light-gold) !important;
-        padding: 9px 12px !important;
-        font-size: 0.75rem !important;
-        font-weight: 600 !important;
-        cursor: pointer !important;
-        transition: all 0.2s !important;
-        text-align: left !important;
-        border-bottom: 1px solid rgba(212, 146, 10, 0.1) !important;
-      }
+            .custom-lang-options.show {
+                display: block !important;
+            }
 
-      .custom-lang-option:last-child {
-        border-bottom: none !important;
-      }
+            .custom-lang-option {
+                color: var(--light-gold) !important;
+                padding: 9px 12px !important;
+                font-size: 0.75rem !important;
+                font-weight: 600 !important;
+                cursor: pointer !important;
+                transition: all 0.2s !important;
+                text-align: left !important;
+                border-bottom: 1px solid rgba(212, 146, 10, 0.1) !important;
+            }
 
-      .custom-lang-option:hover {
-        background: rgba(212, 146, 10, 0.2) !important;
-        color: var(--white) !important;
-      }
+            .custom-lang-option:last-child {
+                border-bottom: none !important;
+            }
 
-      @keyframes langDropdownSlide {
-        from { opacity: 0; transform: translateY(-6px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
+            .custom-lang-option:hover {
+                background: rgba(212, 146, 10, 0.2) !important;
+                color: var(--white) !important;
+            }
 
-      @media (max-width: 768px) {
-        .custom-lang-dropdown {
-          display: inline-block !important;
-        }
-        .lang-select {
-          display: none !important; /* Hide old native dropdown */
-        }
-      }
+            @keyframes langDropdownSlide {
+                from {
+                    opacity: 0;
+                    transform: translateY(-6px);
+                }
 
-    </style>
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .custom-lang-dropdown {
+                    display: inline-block !important;
+                }
+
+                .lang-select {
+                    display: none !important;
+                    /* Hide old native dropdown */
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -4100,16 +4109,16 @@
                     <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
                 </div>
                 <div class="custom-lang-dropdown">
-          <button class="custom-lang-btn" onclick="toggleCustomLangDropdown(event)" type="button">
-            <span class="current-lang-text">हिंदी</span>
-            <span class="arrow">▼</span>
-          </button>
-          <div class="custom-lang-options">
-            <div class="custom-lang-option" onclick="changeLangCustom('hi')">हिंदी</div>
-            <div class="custom-lang-option" onclick="changeLangCustom('gu')">ગુજરાતી</div>
-            <div class="custom-lang-option" onclick="changeLangCustom('en')">English</div>
-          </div>
-        </div>
+                    <button class="custom-lang-btn" onclick="toggleCustomLangDropdown(event)" type="button">
+                        <span class="current-lang-text">हिंदी</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="custom-lang-options">
+                        <div class="custom-lang-option" onclick="changeLangCustom('hi')">हिंदी</div>
+                        <div class="custom-lang-option" onclick="changeLangCustom('gu')">ગુજરાતી</div>
+                        <div class="custom-lang-option" onclick="changeLangCustom('en')">English</div>
+                    </div>
+                </div>
                 <button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">☰</button>
             </nav>
         </header>
@@ -4621,33 +4630,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- Card 3 -->
-                        <div class="donation-type-card">
-                            <div class="donation-type-img-box">
-                                <img alt="Medical Kit" class="donation-type-img"
-                                    src="https://hindrise.org/admin/style/images/careers/20251029111222_Medical Care.png" />
-                            </div>
-                            <div class="donation-type-body">
-                                <h3 class="donation-type-title">
-                                    <span class="lang-hi-inline">चिकित्सा सहायता</span><span
-                                        class="lang-gu-inline">તબીબી સહાય</span>
-                                    <span class="lang-en-inline">Medical Kit</span>
-                                </h3>
-                                <p class="donation-type-desc">
-                                    <span class="lang-hi-inline">घायल और बीमार गायों के इलाज के लिए दवाएं, मरहम-पट्टी और
-                                        चिकित्सा सेवाएं प्रदान करें।</span><span class="lang-gu-inline">ઘાયલ અને બીમાર
-                                        ગાયોની સારવાર માટે દવાઓ, મલમ-પટ્ટી અને તબીબી સેવાઓ પૂરી પાડો.</span>
-                                    <span class="lang-en-inline">Provide medical kits for injured animals—support
-                                        treatment,
-                                        first aid, and save lives.</span>
-                                </p>
-                                <a class="donation-type-btn" href="index.html">
-                                    <span class="lang-hi-inline">इलाज दान करें →</span><span
-                                        class="lang-gu-inline">સારવાર દાન કરો →</span>
-                                    <span class="lang-en-inline">Donate Medical →</span>
-                                </a>
-                            </div>
-                        </div>
+
                         <!-- Card 4 -->
                         <div class="donation-type-card">
                             <div class="donation-type-img-box">
@@ -4676,34 +4659,7 @@
                             </div>
                         </div>
                         <!-- Card 5 -->
-                        <div class="donation-type-card">
-                            <div class="donation-type-img-box">
-                                <img alt="Ambulance Seva" class="donation-type-img"
-                                    src="https://hindrise.org/admin/style/images/careers/20251029111052_cow ambulance.jpg" />
-                            </div>
-                            <div class="donation-type-body">
-                                <h3 class="donation-type-title">
-                                    <span class="lang-hi-inline">गौ रेस्क्यू सेवा</span><span class="lang-gu-inline">ગૌ
-                                        રેસ્ક્યૂ સેવા</span>
-                                    <span class="lang-en-inline">Ambulance Seva</span>
-                                </h3>
-                                <p class="donation-type-desc">
-                                    <span class="lang-hi-inline">सड़क दुर्घटना व गंभीर बीमार गायों के रेस्क्यू व
-                                        चिकित्सा
-                                        एम्बुलेंस संचालन में सहायता करें।</span><span class="lang-gu-inline">માર્ગ
-                                        અકસ્માત અને ગંભીર રીતે બીમાર ગાયોના રેસ્ક્યૂ અને તબીબી એમ્બ્યુલન્સ સંચાલનમાં
-                                        સહાય કરો.</span>
-                                    <span class="lang-en-inline">Sponsor fuel and medical equipment for rescue
-                                        ambulances
-                                        to help injured and sick cows.</span>
-                                </p>
-                                <a class="donation-type-btn" href="index.html">
-                                    <span class="lang-hi-inline">रेस्क्यू सहायता →</span><span
-                                        class="lang-gu-inline">રેસ્ક્યૂ સહાય →</span>
-                                    <span class="lang-en-inline">Support Rescue →</span>
-                                </a>
-                            </div>
-                        </div>
+
                         <!-- Card 6 -->
                         <div class="donation-type-card">
                             <div class="donation-type-img-box">
@@ -6321,45 +6277,45 @@
             if (saved) setLang(saved);
 
             /* ── Mobile Menu Toggle ── */
-            
-      // Custom Language Dropdown Toggle Functions
-      function toggleCustomLangDropdown(event) {
-        event.stopPropagation();
-        const options = document.querySelector('.custom-lang-options');
-        if (options) {
-          options.classList.toggle('show');
-          const arrow = document.querySelector('.custom-lang-btn .arrow');
-          if (arrow) {
-            arrow.style.transform = options.classList.contains('show') ? 'rotate(180deg)' : '';
-          }
-        }
-      }
 
-      function changeLangCustom(lang) {
-        setLang(lang);
-        const options = document.querySelector('.custom-lang-options');
-        if (options) {
-          options.classList.remove('show');
-          const arrow = document.querySelector('.custom-lang-btn .arrow');
-          if (arrow) {
-            arrow.style.transform = '';
-          }
-        }
-      }
+            // Custom Language Dropdown Toggle Functions
+            function toggleCustomLangDropdown(event) {
+                event.stopPropagation();
+                const options = document.querySelector('.custom-lang-options');
+                if (options) {
+                    options.classList.toggle('show');
+                    const arrow = document.querySelector('.custom-lang-btn .arrow');
+                    if (arrow) {
+                        arrow.style.transform = options.classList.contains('show') ? 'rotate(180deg)' : '';
+                    }
+                }
+            }
 
-      // Close dropdown on click outside
-      document.addEventListener('click', function(event) {
-        const options = document.querySelector('.custom-lang-options');
-        if (options && options.classList.contains('show')) {
-          options.classList.remove('show');
-          const arrow = document.querySelector('.custom-lang-btn .arrow');
-          if (arrow) {
-            arrow.style.transform = '';
-          }
-        }
-      });
+            function changeLangCustom(lang) {
+                setLang(lang);
+                const options = document.querySelector('.custom-lang-options');
+                if (options) {
+                    options.classList.remove('show');
+                    const arrow = document.querySelector('.custom-lang-btn .arrow');
+                    if (arrow) {
+                        arrow.style.transform = '';
+                    }
+                }
+            }
 
-      function toggleMenu() {
+            // Close dropdown on click outside
+            document.addEventListener('click', function (event) {
+                const options = document.querySelector('.custom-lang-options');
+                if (options && options.classList.contains('show')) {
+                    options.classList.remove('show');
+                    const arrow = document.querySelector('.custom-lang-btn .arrow');
+                    if (arrow) {
+                        arrow.style.transform = '';
+                    }
+                }
+            });
+
+            function toggleMenu() {
                 const navLinks = document.querySelector('.nav-links');
                 navLinks.classList.toggle('active');
                 const menuToggle = document.querySelector('.menu-toggle');
