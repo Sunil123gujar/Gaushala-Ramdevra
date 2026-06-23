@@ -245,15 +245,14 @@
       }
 
       .logo-circle {
-        width: 58px;
-        height: 58px;
-        background: url("images/713243525_17910887376412066_1305894646775976050_n.jpg") center/cover no-repeat;
+        width: 68px;
+        height: 68px;
+        background: url("./images/guashala_logo.png") center/cover no-repeat;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.4rem;
-        box-shadow: 0 0 0 2px rgba(212, 146, 10, 0.5), 0 0 18px rgba(212, 146, 10, 0.35);
       }
 
       .logo-text .name {
@@ -639,7 +638,7 @@
           padding: 12px 16px 80px !important;
         }
 
-        .footer-bottom > span {
+        .footer-bottom>span {
           display: block;
           width: 100% !important;
           line-height: 1.5 !important;
@@ -1732,7 +1731,7 @@
           /* Reduced top padding to 10px and bottom to 85px */
         }
 
-        .footer-bottom > span {
+        .footer-bottom>span {
           display: block;
           width: 100%;
           line-height: 1.6;
@@ -1740,7 +1739,7 @@
           word-wrap: break-word;
         }
 
-        .footer-bottom > span {
+        .footer-bottom>span {
           display: block;
           width: 100%;
           line-height: 1.6;
@@ -1957,17 +1956,18 @@
           padding: 15px 10px 40px !important;
         }
 
-        .footer-bottom > span {
+        .footer-bottom>span {
           display: block !important;
           width: 100% !important;
           font-size: 0.72rem !important;
         }
       }
-    
+
       /* --- CUSTOM THEME-COMPLIANT LANG DROPDOWN --- */
       .custom-lang-dropdown {
         position: relative;
-        display: none; /* Hidden on desktop by default */
+        display: none;
+        /* Hidden on desktop by default */
         z-index: 1000;
         order: 3 !important;
         margin: 0 10px 0 0 !important;
@@ -2009,7 +2009,7 @@
         background: #2C1A06 !important;
         border: 1px solid var(--gold) !important;
         border-radius: 6px !important;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
         width: 100px !important;
         overflow: hidden !important;
         animation: langDropdownSlide 0.2s ease-out !important;
@@ -2041,19 +2041,27 @@
       }
 
       @keyframes langDropdownSlide {
-        from { opacity: 0; transform: translateY(-6px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       @media (max-width: 768px) {
         .custom-lang-dropdown {
           display: inline-block !important;
         }
+
         .lang-select {
-          display: none !important; /* Hide old native dropdown */
+          display: none !important;
+          /* Hide old native dropdown */
         }
       }
-
     </style>
   </head>
 
@@ -2105,8 +2113,8 @@
           <li><a href="contact.html"><span class="lang-hi-inline">संपर्क करें</span><span class="lang-gu-inline">સંપર્ક
                 કરો</span><span class="lang-en-inline">Contact
                 Us</span></a></li>
-          <li><a href="index.html#donate" class="nav-donate"><span class="heart-circle"><svg
-                  class="heart-svg" viewBox="0 0 24 24">
+          <li><a href="index.html#donate" class="nav-donate"><span class="heart-circle"><svg class="heart-svg"
+                  viewBox="0 0 24 24">
                   <path
                     d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                 </svg></span><span class="btn-text"><span class="lang-hi-inline">दान करें</span><span
@@ -2158,11 +2166,11 @@
         if (btnText) {
           btnText.textContent = langNames[lang];
         }
-    
+
       }
 
       // Mobile Menu Toggle
-      
+
       // Custom Language Dropdown Toggle Functions
       function toggleCustomLangDropdown(event) {
         event.stopPropagation();
@@ -2189,7 +2197,7 @@
       }
 
       // Close dropdown on click outside
-      document.addEventListener('click', function(event) {
+      document.addEventListener('click', function (event) {
         const options = document.querySelector('.custom-lang-options');
         if (options && options.classList.contains('show')) {
           options.classList.remove('show');
@@ -2235,14 +2243,23 @@
             <span class="lang-en-inline">Building Trust Through Service</span>
           </h1>
           <p class="lead">
-            <span class="lang-hi-inline">जय बाबा रामदेव गौसेवा समिति गौशाला रामदेवरा में हम मानते हैं कि सच्ची सेवा हमेशा पारदर्शिता और जिम्मेदारी के साथ की जानी चाहिए।</span>
-            <span class="lang-gu-inline">જય બાબા રામદેવ ગૌસેવા સમિતિ ગૌશાળા રામદેવરામાં અમે માનીએ છીએ કે સાચી સેવા હંમેશા પારદર્શિતા અને જવાબદારી સાથે થવી જોઈએ.</span>
-            <span class="lang-en-inline">At Jai Baba Ramdev Gauseva Samiti Gaushala Ramdevra, we believe that true service should always be rendered with transparency and responsibility.</span>
+            <span class="lang-hi-inline">जय बाबा रामदेव गौसेवा समिति गौशाला रामदेवरा में हम मानते हैं कि सच्ची सेवा
+              हमेशा पारदर्शिता और जिम्मेदारी के साथ की जानी चाहिए।</span>
+            <span class="lang-gu-inline">જય બાબા રામદેવ ગૌસેવા સમિતિ ગૌશાળા રામદેવરામાં અમે માનીએ છીએ કે સાચી સેવા
+              હંમેશા પારદર્શિતા અને જવાબદારી સાથે થવી જોઈએ.</span>
+            <span class="lang-en-inline">At Jai Baba Ramdev Gauseva Samiti Gaushala Ramdevra, we believe that true
+              service should always be rendered with transparency and responsibility.</span>
           </p>
           <p class="lead">
-            <span class="lang-hi-inline">गौशाला में किया जाने वाला प्रत्येक प्रयास गौमाताओं को सुरक्षित आश्रय, भोजन, देखभाल और संरक्षण प्रदान करने के उद्देश्य से समर्पित है। साथ ही, हम समाज के साथ एक खुला और विश्वासपूर्ण संबंध बनाए रखने के लिए प्रतिबद्ध हैं।</span>
-            <span class="lang-gu-inline">ગૌશાળામાં કરવામાં આવતો દરેક પ્રયાસ ગૌમાતાઓને સુરક્ષિત આશ્રય, ભોજન, સંભાળ અને સંરક્ષણ પૂરા પાડવાના ઉદ્દેશ્ય માટે સમર્પિત છે. સાથે જ, અમે સમાજ સાથે ખુલ્લો અને વિશ્વાસપૂર્ણ સંબંધ જાળવી રાખવા માટે પ્રતિબદ્ધ છીએ.</span>
-            <span class="lang-en-inline">Every effort in our Gaushala is dedicated to providing safe shelter, food, care, and protection to cows. We are also committed to maintaining an open and trusting relationship with society.</span>
+            <span class="lang-hi-inline">गौशाला में किया जाने वाला प्रत्येक प्रयास गौमाताओं को सुरक्षित आश्रय, भोजन,
+              देखभाल और संरक्षण प्रदान करने के उद्देश्य से समर्पित है। साथ ही, हम समाज के साथ एक खुला और विश्वासपूर्ण
+              संबंध बनाए रखने के लिए प्रतिबद्ध हैं।</span>
+            <span class="lang-gu-inline">ગૌશાળામાં કરવામાં આવતો દરેક પ્રયાસ ગૌમાતાઓને સુરક્ષિત આશ્રય, ભોજન, સંભાળ અને
+              સંરક્ષણ પૂરા પાડવાના ઉદ્દેશ્ય માટે સમર્પિત છે. સાથે જ, અમે સમાજ સાથે ખુલ્લો અને વિશ્વાસપૂર્ણ સંબંધ જાળવી
+              રાખવા માટે પ્રતિબદ્ધ છીએ.</span>
+            <span class="lang-en-inline">Every effort in our Gaushala is dedicated to providing safe shelter, food,
+              care, and protection to cows. We are also committed to maintaining an open and trusting relationship with
+              society.</span>
           </p>
           <div class="value-pills" aria-label="संस्था के मूल्य">
             <span>
@@ -2288,7 +2305,8 @@
             </span>
           </div>
         </div>
-      </section>      <section class="section page-width fade-in">
+      </section>
+      <section class="section page-width fade-in">
         <div class="section-heading centered">
           <h2>
             <span class="lang-hi-inline">पारदर्शिता के प्रति हमारी प्रतिबद्धता</span>
@@ -2301,9 +2319,15 @@
             <span class="lang-en-inline">Real Activities, Real Impact</span>
           </p>
           <p>
-            <span class="lang-hi-inline">पारदर्शिता हमारे कार्य का एक हिस्सा मात्र नहीं है, बल्कि यह हमारे प्रत्येक निर्णय और गतिविधि का आधार है। हम नियमित रूप से गौशाला की गतिविधियों और प्रगति की जानकारी समाज के साथ साझा करते हैं, ताकि प्रत्येक सहयोगी इस सेवा यात्रा से जुड़ा रह सके।</span>
-            <span class="lang-gu-inline">પારદર્શિતા એ અમારા કાર્યનો માત્ર એક ભાગ નથી, પણ અમારા દરેક નિર્ણય અને પ્રવૃત્તિનો આધાર છે. અમે નિયમિતપણે ગૌશાળાની પ્રવૃત્તિઓ અને પ્રગતિની માહિતી સમાજ સાથે શેર કરીએ છીએ, જેથી દરેક સહયોગી આ સેવા યાત્રા સાથે જોડાયેલા રહી શકે.</span>
-            <span class="lang-en-inline">Transparency is not just a part of our work, but the foundation of our every decision and activity. We regularly share information about the Gaushala's activities and progress with the society, so that every supporter can stay connected to this service journey.</span>
+            <span class="lang-hi-inline">पारदर्शिता हमारे कार्य का एक हिस्सा मात्र नहीं है, बल्कि यह हमारे प्रत्येक
+              निर्णय और गतिविधि का आधार है। हम नियमित रूप से गौशाला की गतिविधियों और प्रगति की जानकारी समाज के साथ साझा
+              करते हैं, ताकि प्रत्येक सहयोगी इस सेवा यात्रा से जुड़ा रह सके।</span>
+            <span class="lang-gu-inline">પારદર્શિતા એ અમારા કાર્યનો માત્ર એક ભાગ નથી, પણ અમારા દરેક નિર્ણય અને
+              પ્રવૃત્તિનો આધાર છે. અમે નિયમિતપણે ગૌશાળાની પ્રવૃત્તિઓ અને પ્રગતિની માહિતી સમાજ સાથે શેર કરીએ છીએ, જેથી
+              દરેક સહયોગી આ સેવા યાત્રા સાથે જોડાયેલા રહી શકે.</span>
+            <span class="lang-en-inline">Transparency is not just a part of our work, but the foundation of our every
+              decision and activity. We regularly share information about the Gaushala's activities and progress with
+              the society, so that every supporter can stay connected to this service journey.</span>
           </p>
         </div>
         <div class="transparency-grid">
@@ -2364,7 +2388,8 @@
             <p>
               <span class="lang-hi-inline">सहयोगियों, स्वयंसेवकों और समाज की भागीदारी से जुड़ी जानकारी।</span>
               <span class="lang-gu-inline">સહયોગીઓ, સ્વયંસેવકો અને સમાજની ભાગીદારી સંબંધિત માહિતી.</span>
-              <span class="lang-en-inline">Information related to the involvement of supporters, volunteers, and the society.</span>
+              <span class="lang-en-inline">Information related to the involvement of supporters, volunteers, and the
+                society.</span>
             </p>
           </article>
         </div>
@@ -2373,7 +2398,8 @@
           <span class="lang-gu-inline">ગૌસેવામાં સહયોગ કરો</span>
           <span class="lang-en-inline">Support Gau Seva</span>
         </button>
-      </section>      <section class="section impact-section fade-in">
+      </section>
+      <section class="section impact-section fade-in">
         <div class="page-width impact-layout">
           <div>
             <h2>
@@ -2387,9 +2413,12 @@
               <span class="lang-en-inline">Service is Empowered by Participation</span>
             </p>
             <p>
-              <span class="lang-hi-inline">समाज का सहयोग हमें गौमाताओं के लिए बेहतर व्यवस्था और निरंतर सेवा प्रदान करने में सहायता करता है। आपकी सहभागिता आश्रय, भोजन, देखभाल और संरक्षण के प्रयासों को मजबूत बनाती है।</span>
-              <span class="lang-gu-inline">સમાજનો સહયોગ અમને ગૌમાતાઓ માટે વધુ સારી વ્યવસ્થા અને સતત સેવા પ્રદાન કરવામાં મદદ કરે છે. તમારી ભાગીદારી આશ્રય, ભોજન, સંભાળ અને સંરક્ષણના પ્રયાસોને મજબૂત બનાવે છે.</span>
-              <span class="lang-en-inline">Community support helps us provide better facilities and continuous service for the cows. Your participation strengthens shelter, food, care, and conservation efforts.</span>
+              <span class="lang-hi-inline">समाज का सहयोग हमें गौमाताओं के लिए बेहतर व्यवस्था और निरंतर सेवा प्रदान करने
+                में सहायता करता है। आपकी सहभागिता आश्रय, भोजन, देखभाल और संरक्षण के प्रयासों को मजबूत बनाती है।</span>
+              <span class="lang-gu-inline">સમાજનો સહયોગ અમને ગૌમાતાઓ માટે વધુ સારી વ્યવસ્થા અને સતત સેવા પ્રદાન કરવામાં
+                મદદ કરે છે. તમારી ભાગીદારી આશ્રય, ભોજન, સંભાળ અને સંરક્ષણના પ્રયાસોને મજબૂત બનાવે છે.</span>
+              <span class="lang-en-inline">Community support helps us provide better facilities and continuous service
+                for the cows. Your participation strengthens shelter, food, care, and conservation efforts.</span>
             </p>
             <div class="impact-grid">
               <article><span>01</span>
@@ -2451,7 +2480,8 @@
             <img loading="lazy" decoding="async" src="./images/chara.jpg" alt="गौमाताओं के लिए चारा व्यवस्था" />
           </div>
         </div>
-      </section>      <section class="section community-section fade-in">
+      </section>
+      <section class="section community-section fade-in">
         <div class="page-width community-layout">
           <div class="image-card">
             <img loading="lazy" decoding="async" src="/images/guaa3.jpg" alt="gauseva community support" />
@@ -2468,14 +2498,21 @@
               <span class="lang-en-inline">A Mission Moving Forward Together</span>
             </p>
             <p>
-              <span class="lang-hi-inline">गौशाला की प्रगति और स्थिरता समाज के सहयोग से संभव होती है। प्रत्येक सहयोगी, स्वयंसेवक और शुभचिंतक इस मिशन का महत्वपूर्ण हिस्सा है।</span>
-              <span class="lang-gu-inline">ગૌશાળાની પ્રગતિ અને સ્થિરતા સમાજના સહયોગથી શક્ય બને છે. દરેક સહયોગી, સ્વયંસેવક અને શુભચિંતક આ મિશનનો મહત્વનો ભાગ છે.</span>
-              <span class="lang-en-inline">The progress and sustainability of the Gaushala are made possible by community support. Every supporter, volunteer, and well-wisher is an important part of this mission.</span>
+              <span class="lang-hi-inline">गौशाला की प्रगति और स्थिरता समाज के सहयोग से संभव होती है। प्रत्येक सहयोगी,
+                स्वयंसेवक और शुभचिंतक इस मिशन का महत्वपूर्ण हिस्सा है।</span>
+              <span class="lang-gu-inline">ગૌશાળાની પ્રગતિ અને સ્થિરતા સમાજના સહયોગથી શક્ય બને છે. દરેક સહયોગી,
+                સ્વયંસેવક અને શુભચિંતક આ મિશનનો મહત્વનો ભાગ છે.</span>
+              <span class="lang-en-inline">The progress and sustainability of the Gaushala are made possible by
+                community support. Every supporter, volunteer, and well-wisher is an important part of this
+                mission.</span>
             </p>
             <p>
-              <span class="lang-hi-inline">सामूहिक प्रयासों के माध्यम से हम ऐसा वातावरण तैयार कर रहे हैं जहाँ सेवा और सहभागिता मिलकर सकारात्मक परिवर्तन का निर्माण करती हैं।</span>
-              <span class="lang-gu-inline">સામૂહિક પ્રયાસો દ્વારા અમે એવું વાતાવરણ તૈયાર કરી રહ્યા છીએ જ્યાં સેવા અને સહભાગિતા મળીને સકારાત્મક પરિવર્તન લાવે છે.</span>
-              <span class="lang-en-inline">Through collective efforts, we are creating an environment where service and participation together build positive change.</span>
+              <span class="lang-hi-inline">सामूहिक प्रयासों के माध्यम से हम ऐसा वातावरण तैयार कर रहे हैं जहाँ सेवा और
+                सहभागिता मिलकर सकारात्मक परिवर्तन का निर्माण करती हैं।</span>
+              <span class="lang-gu-inline">સામૂહિક પ્રયાસો દ્વારા અમે એવું વાતાવરણ તૈયાર કરી રહ્યા છીએ જ્યાં સેવા અને
+                સહભાગિતા મળીને સકારાત્મક પરિવર્તન લાવે છે.</span>
+              <span class="lang-en-inline">Through collective efforts, we are creating an environment where service and
+                participation together build positive change.</span>
             </p>
             <div class="community-cards">
               <article>
@@ -2501,7 +2538,8 @@
             </button>
           </div>
         </div>
-      </section>      <section class="section page-width connected-section fade-in">
+      </section>
+      <section class="section page-width connected-section fade-in">
         <div class="section-heading">
           <h2>
             <span class="lang-hi-inline">जुड़े रहें हमारी यात्रा से</span>
@@ -2514,9 +2552,15 @@
             <span class="lang-en-inline">Connecting You to Every Activity of Service</span>
           </p>
           <p>
-            <span class="lang-hi-inline">हम मानते हैं कि जो लोग इस मिशन का हिस्सा हैं, उन्हें उसके प्रभाव को देखने का अवसर भी मिलना चाहिए। इसलिए हम नियमित रूप से गतिविधियों, कहानियों, चित्रों और सेवा कार्यों की जानकारी साझा करते हैं। हमारा उद्देश्य विश्वास, पारदर्शिता और जवाबदेही को मजबूत बनाना है।</span>
-            <span class="lang-gu-inline">અમે માનીએ છીએ કે જે લોકો આ મિશનનો ભાગ છે, તેમને તેનો પ્રભાવ જોવાની તક પણ મળવી જોઈએ. તેથી અમે નિયમિતપણે પ્રવૃત્તિઓ, વાર્તાઓ, ચિત્રો અને સેવા કાર્યોની માહિતી શેર કરીએ છીએ. અમારો ઉદ્દેશ્ય વિશ્વાસ, પારદર્શિતા અને જવાબદારીને મજબૂત બનાવવાનો છે.</span>
-            <span class="lang-en-inline">We believe that those who are part of this mission should have the opportunity to see its impact. Therefore, we regularly share activities, stories, images, and service updates. Our goal is to strengthen trust, transparency, and accountability.</span>
+            <span class="lang-hi-inline">हम मानते हैं कि जो लोग इस मिशन का हिस्सा हैं, उन्हें उसके प्रभाव को देखने का
+              अवसर भी मिलना चाहिए। इसलिए हम नियमित रूप से गतिविधियों, कहानियों, चित्रों और सेवा कार्यों की जानकारी साझा
+              करते हैं। हमारा उद्देश्य विश्वास, पारदर्शिता और जवाबदेही को मजबूत बनाना है।</span>
+            <span class="lang-gu-inline">અમે માનીએ છીએ કે જે લોકો આ મિશનનો ભાગ છે, તેમને તેનો પ્રભાવ જોવાની તક પણ મળવી
+              જોઈએ. તેથી અમે નિયમિતપણે પ્રવૃત્તિઓ, વાર્તાઓ, ચિત્રો અને સેવા કાર્યોની માહિતી શેર કરીએ છીએ. અમારો ઉદ્દેશ્ય
+              વિશ્વાસ, પારદર્શિતા અને જવાબદારીને મજબૂત બનાવવાનો છે.</span>
+            <span class="lang-en-inline">We believe that those who are part of this mission should have the opportunity
+              to see its impact. Therefore, we regularly share activities, stories, images, and service updates. Our
+              goal is to strengthen trust, transparency, and accountability.</span>
           </p>
         </div>
         <div class="update-layout">
@@ -2579,9 +2623,12 @@
                 <span class="lang-en-inline">Trust is Built on Transparency</span>
               </h3>
               <p>
-                <span class="lang-hi-inline">हर अपडेट समाज को इस सेवा यात्रा के करीब लाता है और सहयोगियों को दिखाता है कि उनका योगदान किस प्रकार उपयोगी बन रहा है।</span>
-                <span class="lang-gu-inline">દરેક અપડેટ સમાજને આ સેવા યાત્રાની નજીક લાવે છે અને સહયોગીઓને દર્શાવે છે કે તેમનું યોગદાન કેવી રીતે ઉપયોગી થઈ રહ્યું છે.</span>
-                <span class="lang-en-inline">Every update brings the society closer to this service journey and shows supporters how their contribution is making a difference.</span>
+                <span class="lang-hi-inline">हर अपडेट समाज को इस सेवा यात्रा के करीब लाता है और सहयोगियों को दिखाता है
+                  कि उनका योगदान किस प्रकार उपयोगी बन रहा है।</span>
+                <span class="lang-gu-inline">દરેક અપડેટ સમાજને આ સેવા યાત્રાની નજીક લાવે છે અને સહયોગીઓને દર્શાવે છે કે
+                  તેમનું યોગદાન કેવી રીતે ઉપયોગી થઈ રહ્યું છે.</span>
+                <span class="lang-en-inline">Every update brings the society closer to this service journey and shows
+                  supporters how their contribution is making a difference.</span>
               </p>
             </div>
 
@@ -2592,9 +2639,16 @@
                 <span class="lang-en-inline">Transparency is Our Identity</span>
               </h3>
               <p>
-                <span class="lang-hi-inline">हम मानते हैं कि सेवा तभी सफल होती है जब उसमें विश्वास जुड़ा हो। इसलिए गौशाला की गतिविधियों, सेवा कार्यों और विकास योजनाओं की जानकारी समय-समय पर समाज के साथ साझा की जाती है, ताकि प्रत्येक सहयोगी अपने योगदान का सकारात्मक प्रभाव देख सके।</span>
-                <span class="lang-gu-inline">અમે માનીએ છીએ કે સેવા ત્યારે જ સફળ થાય છે જ્યારે તેમાં વિશ્વાસ જોડાયેલો હોય. તેથી ગૌશાળાની પ્રવૃત્તિઓ, સેવા કાર્યો અને વિકાસ યોજનાઓની માહિતી સમયાંતરે સમાજ સાથે શેર કરવામાં આવે છે, જેથી દરેક સહયોગી પોતાના યોગદાનની સકારાત્મક અસર જોઈ શકે.</span>
-                <span class="lang-en-inline">We believe that service is only successful when trust is attached. Therefore, information about Gaushala's activities, service works, and development plans is shared with the society from time to time, so that every supporter can see the positive impact of their contribution.</span>
+                <span class="lang-hi-inline">हम मानते हैं कि सेवा तभी सफल होती है जब उसमें विश्वास जुड़ा हो। इसलिए
+                  गौशाला की गतिविधियों, सेवा कार्यों और विकास योजनाओं की जानकारी समय-समय पर समाज के साथ साझा की जाती है,
+                  ताकि प्रत्येक सहयोगी अपने योगदान का सकारात्मक प्रभाव देख सके।</span>
+                <span class="lang-gu-inline">અમે માનીએ છીએ કે સેવા ત્યારે જ સફળ થાય છે જ્યારે તેમાં વિશ્વાસ જોડાયેલો
+                  હોય. તેથી ગૌશાળાની પ્રવૃત્તિઓ, સેવા કાર્યો અને વિકાસ યોજનાઓની માહિતી સમયાંતરે સમાજ સાથે શેર કરવામાં
+                  આવે છે, જેથી દરેક સહયોગી પોતાના યોગદાનની સકારાત્મક અસર જોઈ શકે.</span>
+                <span class="lang-en-inline">We believe that service is only successful when trust is attached.
+                  Therefore, information about Gaushala's activities, service works, and development plans is shared
+                  with the society from time to time, so that every supporter can see the positive impact of their
+                  contribution.</span>
               </p>
             </div>
             <div class="connected-card">
@@ -2604,14 +2658,21 @@
                 <span class="lang-en-inline">Transparency is the Foundation of Trust</span>
               </h3>
               <p>
-                <span class="lang-hi-inline">गौसेवा केवल एक कार्य नहीं, बल्कि सामूहिक जिम्मेदारी है। हम प्रत्येक दान, सेवा गतिविधि और महत्वपूर्ण उपलब्धि को खुले रूप से साझा करते हैं, जिससे समाज और सहयोगियों के बीच विश्वास और सहभागिता लगातार मजबूत होती रहे।</span>
-                <span class="lang-gu-inline">ગૌસેવા માત્ર એક કાર્ય નથી, પણ એક સામૂહિક જવાબદારી છે. અમે દરેક દાન, સેવા પ્રવૃત્તિ અને મહત્વપૂર્ણ સિદ્ધિને ખુલ્લા મને શેર કરીએ છીએ, જેનાથી સમાજ અને સહયોગીઓ વચ્ચે વિશ્વાસ અને ભાગીદારી સતત મજબૂત થતી રહે.</span>
-                <span class="lang-en-inline">Cow service is not just a job, but a collective responsibility. We openly share every donation, service activity, and key milestone, so that trust and participation between the society and supporters remain continuously strong.</span>
+                <span class="lang-hi-inline">गौसेवा केवल एक कार्य नहीं, बल्कि सामूहिक जिम्मेदारी है। हम प्रत्येक दान,
+                  सेवा गतिविधि और महत्वपूर्ण उपलब्धि को खुले रूप से साझा करते हैं, जिससे समाज और सहयोगियों के बीच
+                  विश्वास और सहभागिता लगातार मजबूत होती रहे।</span>
+                <span class="lang-gu-inline">ગૌસેવા માત્ર એક કાર્ય નથી, પણ એક સામૂહિક જવાબદારી છે. અમે દરેક દાન, સેવા
+                  પ્રવૃત્તિ અને મહત્વપૂર્ણ સિદ્ધિને ખુલ્લા મને શેર કરીએ છીએ, જેનાથી સમાજ અને સહયોગીઓ વચ્ચે વિશ્વાસ અને
+                  ભાગીદારી સતત મજબૂત થતી રહે.</span>
+                <span class="lang-en-inline">Cow service is not just a job, but a collective responsibility. We openly
+                  share every donation, service activity, and key milestone, so that trust and participation between the
+                  society and supporters remain continuously strong.</span>
               </p>
             </div>
           </div>
         </div>
-      </section>      <section class="section page-width promise-section fade-in">
+      </section>
+      <section class="section page-width promise-section fade-in">
         <div>
           <h2>
             <span class="lang-hi-inline">हमारा संकल्प</span>
@@ -2624,9 +2685,12 @@
             <span class="lang-en-inline">Service with Responsibility</span>
           </p>
           <p>
-            <span class="lang-hi-inline">जैसे-जैसे हम अपने प्रयासों का विस्तार करते हैं, हमारी प्रतिबद्धता हमेशा एक समान रहती है। हमारा प्रत्येक कदम इन्हीं मूल्यों से प्रेरित है।</span>
-            <span class="lang-gu-inline">જેમ જેમ અમે અમારા પ્રયાસોનો વિસ્તાર કરીએ છીએ, તેમ તેમ અમારી પ્રતિબદ્ધતા હંમેશા એક સમાન રહે છે. અમારું દરેક પગલું આ જ મૂલ્યોથી પ્રેરિત છે.</span>
-            <span class="lang-en-inline">As we expand our efforts, our commitment remains the same. Every step we take is guided by these values.</span>
+            <span class="lang-hi-inline">जैसे-जैसे हम अपने प्रयासों का विस्तार करते हैं, हमारी प्रतिबद्धता हमेशा एक समान
+              रहती है। हमारा प्रत्येक कदम इन्हीं मूल्यों से प्रेरित है।</span>
+            <span class="lang-gu-inline">જેમ જેમ અમે અમારા પ્રયાસોનો વિસ્તાર કરીએ છીએ, તેમ તેમ અમારી પ્રતિબદ્ધતા હંમેશા
+              એક સમાન રહે છે. અમારું દરેક પગલું આ જ મૂલ્યોથી પ્રેરિત છે.</span>
+            <span class="lang-en-inline">As we expand our efforts, our commitment remains the same. Every step we take
+              is guided by these values.</span>
           </p>
           <button class="cta-button section-cta js-scroll-final" type="button">
             <span class="lang-hi-inline">गौसेवा में सहयोग करें</span>
@@ -2656,7 +2720,8 @@
             <span class="lang-en-inline">Development with Community Involvement</span>
           </li>
         </ul>
-      </section>      <section id="final" class="final-cta page-width fade-in">
+      </section>
+      <section id="final" class="final-cta page-width fade-in">
         <p class="eyebrow">
           <span class="lang-hi-inline">अंतिम आह्वान</span>
           <span class="lang-gu-inline">અંતિમ આહવાન</span>
@@ -2668,19 +2733,30 @@
           <span class="lang-en-inline">Create Meaningful Impact Together</span>
         </h2>
         <p>
-          <span class="lang-hi-inline">जब सेवा, विश्वास और सहभागिता एक साथ आते हैं, तब वास्तविक परिवर्तन संभव होता है। आइए, हम मिलकर गौमाताओं के लिए एक सुरक्षित, सम्मानजनक और देखभालपूर्ण वातावरण का निर्माण करें तथा जिम्मेदारी और करुणा की संस्कृति को आगे बढ़ाएं।</span>
-          <span class="lang-gu-inline">જ્યારે સેવા, વિશ્વાસ અને ભાગીદારી એકસાથે આવે છે, ત્યારે જ વાસ્તવિક પરિવર્તન શક્ય બને છે. આવો, આપણે મળીને ગૌમાતાઓ માટે એક સુરક્ષિત, સન્માનજનક અને સંભાળભર્યા વાતાવરણનું નિર્માણ કરીએ અને જવાબદારી તથા કરુણાની સંસ્કૃતિને આગળ વધારીએ.</span>
-          <span class="lang-en-inline">When service, trust, and participation come together, real change becomes possible. Let us work together to build a safe, respectful, and caring environment for the cows, and promote a culture of responsibility and compassion.</span>
+          <span class="lang-hi-inline">जब सेवा, विश्वास और सहभागिता एक साथ आते हैं, तब वास्तविक परिवर्तन संभव होता है।
+            आइए, हम मिलकर गौमाताओं के लिए एक सुरक्षित, सम्मानजनक और देखभालपूर्ण वातावरण का निर्माण करें तथा जिम्मेदारी
+            और करुणा की संस्कृति को आगे बढ़ाएं।</span>
+          <span class="lang-gu-inline">જ્યારે સેવા, વિશ્વાસ અને ભાગીદારી એકસાથે આવે છે, ત્યારે જ વાસ્તવિક પરિવર્તન શક્ય
+            બને છે. આવો, આપણે મળીને ગૌમાતાઓ માટે એક સુરક્ષિત, સન્માનજનક અને સંભાળભર્યા વાતાવરણનું નિર્માણ કરીએ અને
+            જવાબદારી તથા કરુણાની સંસ્કૃતિને આગળ વધારીએ.</span>
+          <span class="lang-en-inline">When service, trust, and participation come together, real change becomes
+            possible. Let us work together to build a safe, respectful, and caring environment for the cows, and promote
+            a culture of responsibility and compassion.</span>
         </p>
         <div class="brand-line">
-          <span class="lang-hi-inline">पारदर्शिता <span></span> विश्वास <span></span> सहभागिता <span></span> प्रभाव</span>
-          <span class="lang-gu-inline">પારદર્શિતા <span></span> વિશ્વાસ <span></span> ભાગીદારી <span></span> પ્રભાવ</span>
-          <span class="lang-en-inline">Transparency <span></span> Trust <span></span> Participation <span></span> Impact</span>
+          <span class="lang-hi-inline">पारदर्शिता <span></span> विश्वास <span></span> सहभागिता <span></span>
+            प्रभाव</span>
+          <span class="lang-gu-inline">પારદર્શિતા <span></span> વિશ્વાસ <span></span> ભાગીદારી <span></span>
+            પ્રભાવ</span>
+          <span class="lang-en-inline">Transparency <span></span> Trust <span></span> Participation <span></span>
+            Impact</span>
         </div>
         <p>
-          <span class="lang-hi-inline">सामूहिक जिम्मेदारी और सार्थक सेवा के माध्यम से सकारात्मक परिवर्तन की ओर एक कदम।</span>
+          <span class="lang-hi-inline">सामूहिक जिम्मेदारी और सार्थक सेवा के माध्यम से सकारात्मक परिवर्तन की ओर एक
+            कदम।</span>
           <span class="lang-gu-inline">સામૂહિક જવાબદારી અને સાર્થક સેવા દ્વારા સકારાત્મક પરિવર્તન તરફ એક પગલું.</span>
-          <span class="lang-en-inline">A step towards positive change through collective responsibility and meaningful service.</span>
+          <span class="lang-en-inline">A step towards positive change through collective responsibility and meaningful
+            service.</span>
         </p>
         <div class="final-actions">
           <button class="cta-button" type="button" onclick="window.location.href='index.html#donate'">
@@ -2813,8 +2889,8 @@
                   class="lang-gu-inline">સંપર્ક
                   કરો</span><span class="lang-en-inline">Contact
                   Us</span></a></li>
-            <li><a href="index.html#donate" class="nav-donate"><span class="heart-circle"><svg
-                    class="heart-svg" viewBox="0 0 24 24">
+            <li><a href="index.html#donate" class="nav-donate"><span class="heart-circle"><svg class="heart-svg"
+                    viewBox="0 0 24 24">
                     <path
                       d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                   </svg></span><span class="btn-text"><span class="lang-hi-inline">दान
@@ -2855,9 +2931,12 @@
       </div>
       <div class="footer-bottom">
         <span>
-          <span class="lang-hi-inline">© 2025 गौशाला रामदेवरा। सर्वाधिकार सुरक्षित। 🕉️ पंजीकृत NGO | 80G प्रमाणित</span>
-          <span class="lang-gu-inline">© 2025 ગૌશાળા રામદેવરા. સર્વાધિકાર સુરક્ષિત. 🕉️ રજિસ્ટર્ડ NGO | 80G પ્રમાણિત</span>
-          <span class="lang-en-inline">© 2025 Gaushala Ramdevra. All Rights Reserved. 🕉️ Registered NGO | 80G Certified</span>
+          <span class="lang-hi-inline">© 2025 गौशाला रामदेवरा। सर्वाधिकार सुरक्षित। 🕉️ पंजीकृत NGO | 80G
+            प्रमाणित</span>
+          <span class="lang-gu-inline">© 2025 ગૌશાળા રામદેવરા. સર્વાધિકાર સુરક્ષિત. 🕉️ રજિસ્ટર્ડ NGO | 80G
+            પ્રમાણિત</span>
+          <span class="lang-en-inline">© 2025 Gaushala Ramdevra. All Rights Reserved. 🕉️ Registered NGO | 80G
+            Certified</span>
         </span>
         <span>
           <span class="lang-hi-inline">🧡 गौ माता सेवा हेतु निर्मित</span>
