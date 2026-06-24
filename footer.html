@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<<<<<<< HEAD
 
     <head>
         <meta charset="utf-8" />
@@ -8,6 +9,14 @@
         <title>Document</title>
         <!-- FOOTER STYLE -->
         <style>
+=======
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Document</title>
+<!-- FOOTER STYLE -->
+<style>
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
             /* variables fallback in case parent doesn't define them */
             :root {
                 --saffron: #E8600A;
@@ -229,7 +238,11 @@
                 text-decoration: none;
                 font-size: 1rem;
                 transition: all 0.3s ease;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                 color: rgba(255, 255, 255, 0.7) !important;
             }
 
@@ -392,8 +405,12 @@
                     display: flex !important;
                     justify-content: space-between !important;
                     align-items: center !important;
+<<<<<<< HEAD
                     padding: 8px 10px !important;
                     /* Shrunk padding */
+=======
+                    padding: 8px 10px !important; /* Shrunk padding */
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                     position: relative !important;
                     width: 100% !important;
                     gap: 6px !important;
@@ -415,20 +432,32 @@
                 }
 
                 .logo-text {
+<<<<<<< HEAD
                     max-width: 200px !important;
                     /* Slightly shrunk */
+=======
+                    max-width: 200px !important; /* Slightly shrunk */
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                     text-align: center !important;
                 }
 
                 .logo-text .name {
+<<<<<<< HEAD
                     font-size: 0.85rem !important;
                     /* Shrunk font size to prevent overflow */
+=======
+                    font-size: 0.85rem !important; /* Shrunk font size to prevent overflow */
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                     white-space: nowrap !important;
                 }
 
                 .logo-text .tagline {
+<<<<<<< HEAD
                     font-size: 0.48rem !important;
                     /* Shrunk tagline font size */
+=======
+                    font-size: 0.48rem !important; /* Shrunk tagline font size */
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                     display: block;
                     white-space: normal !important;
                 }
@@ -437,10 +466,15 @@
                     display: block !important;
                     order: 1 !important;
                     margin: 0 !important;
+<<<<<<< HEAD
                     font-size: 1.2rem !important;
                     /* Shrunk menu toggle */
                     padding: 4px 8px !important;
                     /* Shrunk menu toggle padding */
+=======
+                    font-size: 1.2rem !important; /* Shrunk menu toggle */
+                    padding: 4px 8px !important; /* Shrunk menu toggle padding */
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                 }
 
                 .lang-select {
@@ -567,8 +601,12 @@
                     text-align: center !important;
                     padding: 12px 16px 80px !important;
                 }
+<<<<<<< HEAD
 
                 .footer-bottom>span {
+=======
+                .footer-bottom > span {
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
                     display: block;
                     width: 100% !important;
                     line-height: 1.5 !important;
@@ -576,11 +614,16 @@
                     word-wrap: break-word !important;
                 }
             }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
             .footer-donate-wrapper {
                 display: none;
             }
 
+<<<<<<< HEAD
             /* Cascading Mobile Footer Overrides to Center Column Items and Prevent Overflow */
             .footer-donate-wrapper {
                 display: none;
@@ -902,6 +945,281 @@
         </div>
         <!-- FOOTER SCRIPTS -->
         <script>
+=======
+/* Cascading Mobile Footer Overrides to Center Column Items and Prevent Overflow */
+.footer-donate-wrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px 10px !important;
+        padding: 40px 10px !important;
+    }
+
+    .footer-brand {
+        grid-column: span 3 !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-brand .logo {
+        justify-content: center !important;
+        margin-inline: auto !important;
+    }
+
+    .footer-brand p {
+        text-align: center !important;
+        margin-inline: auto !important;
+        max-width: 90% !important;
+        font-size: 0.8rem !important;
+    }
+
+    .footer-brand .btn-primary,
+    .footer-brand a.btn-primary {
+        display: inline-flex !important;
+        margin: 12px auto 0 !important;
+    }
+
+    .footer-socials {
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+
+    .footer-col {
+        text-align: center !important; /* Center the column text alignment */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Center column children */
+    }
+
+    .footer-col h4 {
+        font-size: 0.72rem !important;
+        margin-bottom: 10px !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+    }
+
+    .footer-col ul {
+        gap: 8px !important;
+        align-items: center !important; /* Center list items vertically */
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .footer-col ul a {
+        font-size: 0.75rem !important;
+        text-align: center !important;
+    }
+
+    .footer-col ul li {
+        width: 100% !important;
+        display: block !important;
+        text-align: center !important; /* Center the list items text */
+    }
+
+    .footer-col ul li:has(a.nav-donate) {
+        display: none !important;
+    }
+
+    .footer-donate-wrapper {
+        display: flex !important;
+        grid-column: span 3 !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+        width: 100% !important;
+    }
+
+    .footer-donate-wrapper .nav-donate {
+        display: inline-flex !important;
+        margin: 0 auto !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        gap: 6px !important;
+        text-align: center !important;
+        padding: 15px 10px 40px !important;
+    }
+
+    .footer-bottom > span {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+    }
+}
+</style>
+</head>
+<body>
+<!-- FOOTER -->
+<footer>
+<!-- Hope Banner Section -->
+<div class="hope-banner-section">
+<div class="hope-banner-overlay"></div>
+<div class="hope-banner-content">
+<h2 class="lang-hi">एक बेहतर कल की आशा बनें</h2>
+<h2 class="lang-en">Be the Hope for a Better Tomorrow</h2>
+<h2 class="lang-gu">એક વધુ સારા આવતીકાલની આશા બનો</h2>
+<p class="lang-hi">आपका सहयोग किसी गौमाता के जीवन में नई उम्मीद ला सकता है।</p>
+<p class="lang-en">Your support can bring new hope to the life of a cow.</p>
+<p class="lang-gu">તમારો સહયોગ કોઈ ગૌમાતાના જીવનમાં નવી આશા લાવી શકે છે.</p>
+<a class="hope-banner-btn" href="index.html#donate">
+<span class="lang-hi-inline">अभी सहयोग करें</span>
+<span class="lang-en-inline">Support Now</span>
+<span class="lang-gu-inline">અત્યારે જ સહયોગ કરો</span>
+</a>
+</div>
+</div>
+<div class="footer-main">
+<div class="footer-brand">
+<div class="logo">
+<div class="logo-circle" style="width:44px;height:44px;font-size:1.2rem;">🐄</div>
+<div class="logo-text">
+<span class="name lang-hi">गौशाला रामदेवरा</span>
+<span class="name lang-en">Gaushala Ramdevra</span><span class="name lang-gu">ગૌશાળા
+                                રામદેવરા</span><span class="name lang-gu">ગૌશાળા
+                                રામદેવરા</span>
+<span class="tagline lang-hi">गौ माता सेवा धाम</span>
+<span class="tagline lang-en">Gau Mata Seva Dham</span><span class="tagline lang-gu">ગૌમાતા
+                                સેવા ધામ</span>
+</div>
+</div>
+<p class="lang-hi">2012 से बाबा रामदेव जी की पावन भूमि पर गौ माता की सेवा में समर्पित। पंजीकृत NGO,
+                        80G प्रमाणित। पारदर्शी। विश्वसनीय। आशीर्वादित।</p>
+<p class="lang-en">Serving Gau Mata in the divine land of Baba Ramdev Ji since 2012. Registered NGO,
+                        80G Certified. Transparent. Trusted. Blessed.</p>
+<p class="lang-gu">૨૦૧૨ થી બાબા રામદેવજીની પવિત્ર ભૂમિ પર ગૌમાતાની સેવામાં સમર્પિત. રજીસ્ટર્ડ NGO,
+                        80G પ્રમાણિત. પારદર્શક. વિશ્વસનીય. આશીર્વાદિત.</p>
+<div style="margin-top: 18px; margin-bottom: 18px;">
+<a class="btn-primary" href="index.html#donate" style="padding: 10px 20px; font-size: 0.82rem; box-shadow: 0 4px 12px rgba(232, 96, 10, 0.3);">
+                            🙏 <span class="lang-hi-inline">ऑनलाइन दान करें</span><span class="lang-gu-inline">ઓનલાઇન
+                                દાન કરો</span>
+<span class="lang-en-inline">Donate Online Now</span>
+</a>
+</div>
+<div class="footer-socials">
+<a aria-label="Google" class="social-btn google" href="https://www.google.com/search?kgmid=/g/11nb2k4vjq&amp;hl=en-IN&amp;q=%E0%A4%9C%E0%A4%AF+%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A4%BE+%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A5%87%E0%A4%B5+%E0%A4%97%E0%A5%8C%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE+%E0%A4%B8%E0%A4%AE%E0%A4%BF%E0%A4%A4%E0%A4%BF+%E0%A4%97%E0%A5%8C%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A4%BE+%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%B0%E0%A4%BE&amp;shem=rimspwouoe&amp;shndl=30&amp;source=sh/x/loc/osrp/m1/4&amp;kgs=548218485ddb5df1&amp;utm_source=rimspwouoe,sh/x/loc/osrp/m1/4" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.454 0-6.258-2.804-6.258-6.258s2.804-6.258 6.258-6.258c1.55 0 2.964.568 4.053 1.503l3.078-3.078C18.667 1.838 15.656 1 12.24 1 6.04 1 1 6.04 1 12.24s5.04 11.24 11.24 11.24c6.2 0 11.24-5.04 11.24-11.24 0-.828-.078-1.637-.215-2.435H12.24z"></path>
+</svg></a>
+<a aria-label="Instagram" class="social-btn instagram" href="https://www.instagram.com/ramdevra_gaushala/" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+</svg></a>
+<a aria-label="Facebook" class="social-btn facebook" href="https://www.facebook.com/profile.php?id=61590324281845&amp;rdid=e4UVJHlL3SN7XTGP" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg></a>
+<a aria-label="YouTube" class="social-btn youtube" href="https://www.youtube.com/@ramdevra_gaushala" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg></a>
+</div>
+</div>
+<div class="footer-col">
+<h4 class="lang-hi-inline">सेवा कार्यक्रम</h4>
+<h4 class="lang-gu-inline">સેવા કાર્યક્રમો</h4>
+<h4 class="lang-en-inline">Seva Programs</h4>
+<ul>
+<li><a href="#"><span class="lang-hi-inline">गाय को चारा दें</span><span class="lang-gu-inline">ગાયને ચારો ખવડાવો</span><span class="lang-en-inline">Feed a
+                                    Cow</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">चिकित्सा सेवा</span><span class="lang-gu-inline">તબીબી સેવા</span><span class="lang-en-inline">Medical
+                                    Seva</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">गाय गोद लें</span><span class="lang-gu-inline">ગાય
+                                    દત્તક લો</span><span class="lang-en-inline">Adopt a Cow</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">शेड प्रायोजन</span><span class="lang-gu-inline">શેડ
+                                    સ્પોન્સરશિપ</span><span class="lang-en-inline">Sponsor a Shed</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">गौ पूजा सेवा</span><span class="lang-gu-inline">ગૌ
+                                    પૂજા સેવા</span><span class="lang-en-inline">Gau
+                                    Puja Seva</span></a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="lang-hi-inline">त्वरित लिंक</h4>
+<h4 class="lang-gu-inline">ઝડપી લિંક્સ</h4>
+<h4 class="lang-en-inline">Quick Links</h4>
+<ul>
+<li><a href="index.html"><span class="lang-hi-inline">होम पेज</span>
+<span class="lang-gu-inline">હોમ
+                                    પેજ</span><span class="lang-en-inline">Home Page</span></a></li>
+<li><a href="about.html"><span class="lang-hi-inline">हमारे बारे में</span><span class="lang-gu-inline">અમારા
+                                    વિશે</span><span class="lang-en-inline">About Us</span></a>
+</li>
+<li><a href="Our_Work.html"><span class="lang-hi-inline">हमारे कार्य</span><span class="lang-gu-inline">અમારા
+                                    કાર્યો</span><span class="lang-en-inline">Our
+                                    Work</span></a></li>
+<li><a href="transprancy.html"><span class="lang-hi-inline">पारदर्शिता
+                                </span><span class="lang-gu-inline">પારદર્શિતા
+                                </span><span class="lang-en-inline">Transparency
+                                </span></a></li>
+<li><a href="contact.html"><span class="lang-hi-inline">संपर्क करें</span><span class="lang-gu-inline">સંપર્ક
+                                    કરો</span><span class="lang-en-inline">Contact
+                                    Us</span></a></li>
+<li><a class="nav-donate" href="index.html#donate"><span class="heart-circle"><svg class="heart-svg" viewbox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+</svg></span><span class="btn-text"><span class="lang-hi-inline">दान
+                                        करें</span><span class="lang-gu-inline">દાન કરો</span><span class="lang-en-inline">Donate</span></span></a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="lang-hi-inline">उत्पाद</h4>
+<h4 class="lang-gu-inline">પ્રોડક્ટ્સ</h4>
+<h4 class="lang-en-inline">Products</h4>
+<ul>
+<li><a href="#"><span class="lang-hi-inline">A2 देसी घी</span><span class="lang-gu-inline">A2
+                                    દેશી ઘી</span><span class="lang-en-inline">A2
+                                    Desi Ghee</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">गोमूत्र अर्क</span><span class="lang-gu-inline">ગૌમૂત્ર અર્ક</span><span class="lang-en-inline">Gomutra
+                                    Ark</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">गोबर दीया</span><span class="lang-gu-inline">છાણના
+                                    દીવા</span><span class="lang-en-inline">Cow
+                                    Dung Diyas</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">पंचगव्य साबुन</span><span class="lang-gu-inline">પંચગવ્ય સાબુ</span><span class="lang-en-inline">Panchgavya
+                                    Soap</span></a></li>
+<li><a href="#"><span class="lang-hi-inline">जैविक खाद</span><span class="lang-gu-inline">જૈવિક
+                                    ખાતર</span><span class="lang-en-inline">Organic Fertilizer</span></a></li>
+</ul>
+</div>
+<div class="footer-donate-wrapper">
+<a class="nav-donate" href="index.html#donate"><span class="heart-circle"><svg class="heart-svg" viewbox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg></span><span class="btn-text"><span class="lang-hi-inline">दान करें</span><span class="lang-gu-inline">દાન કરો</span><span class="lang-en-inline">Donate</span></span></a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
+<span class="lang-hi-inline">© 2025 गौशाला रामदेवरा। सर्वाधिकार सुरक्षित। 🕉️ पंजीकृत NGO | 80G प्रमाणित</span>
+<span class="lang-gu-inline">© 2025 ગૌશાળા રામદેવરા. સર્વાધિકાર સુરક્ષિત. 🕉️ રજિસ્ટર્ડ NGO | 80G પ્રમાણિત</span>
+<span class="lang-en-inline">© 2025 Gaushala Ramdevra. All Rights Reserved. 🕉️ Registered NGO | 80G Certified</span>
+</span>
+
+
+<span><span class="lang-hi-inline">🧡 गौ माता सेवा हेतु निर्मित</span><span class="lang-gu-inline">ગૌમાતા સેવા
+                    માટે 🧡 સાથે બનાવેલ</span><span class="lang-en-inline">Made with 🧡 for Gau Mata Seva</span></span></div>
+</footer>
+<!-- FLOATING RESCUE HOTLINE & WHATSAPP WIDGET -->
+<div class="floating-rescue-bar">
+<!-- Helpline Button -->
+<a aria-label="Call Rescue Helpline" class="rescue-btn call-btn" href="tel:+918368703510">
+                📞
+                <span class="rescue-tooltip">
+<span class="lang-hi-inline">🚨 गौ रेस्क्यू हेल्पलाइन: 8368703510</span><span class="lang-gu-inline">🚨 ગૌ
+                        રેસ્ક્યૂ હેલ્પલાઇન: 8368703510</span>
+<span class="lang-en-inline">🚨 Rescue Helpline: 8368703510</span>
+</span>
+</a>
+<!-- WhatsApp Button -->
+<a aria-label="Chat on WhatsApp" class="rescue-btn wa-btn" href="https://wa.me/918368703510?text=Jai%20Mata%20Di%20I%20want%20to%20support%20Gau%20Seva" target="_blank">
+                💬
+                <span class="rescue-tooltip">
+<span class="lang-hi-inline">💬 व्हाट्सएप गौ सेवा</span><span class="lang-gu-inline">💬 વોટ્સએપ ગૌ
+                        સેવા</span>
+<span class="lang-en-inline">💬 WhatsApp Gau Seva</span>
+</span>
+</a>
+</div>
+<!-- FOOTER SCRIPTS -->
+<script>
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
             // Copy UPI functionality
             function copyUPI() {
                 const upiText = document.getElementById('upi-id')?.innerText || 'gaushalaramdevra@upi';
@@ -918,6 +1236,10 @@
                 });
             }
         </script>
+<<<<<<< HEAD
     </body>
 
+=======
+</body>
+>>>>>>> e6857085bdfaf854c31219d462940c4c840886c0
 </html>
