@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="जय बाबा रामदेव गौसेवा समिति गौशाला रामदेवरा — नियम और शर्तें तथा गोपनीयता नीति।" />
+    <title>नियम व शर्तें | जय बाबा रामदेव गौसेवा समिति गौशाला रामदेवरा</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --saffron: #E8600A;
+            --deep-saffron: #C04A00;
+            --gold: #D4920A;
+            --light-gold: #F5C842;
+            --pale-gold: #FDE68A;
+            --ivory: #FDF6E8;
+            --cream: #FFF9F0;
+            --rust: #8B3A0F;
+            --dark-earth: #1E0F02;
+            --mid-earth: #4A2808;
+            --green-pasture: #1E5C2A;
+            --light-green: #3A8048;
+            --sky: #C7E8F5;
+            --white: #FFFFFF;
+            --text-dark: #1A0E03;
+            --text-mid: #4A3520;
+            --text-light: #8A6A40;
+            --border: #E8D5B0;
+            --border-light: #F3E8CC;
+            --gradient-primary: linear-gradient(135deg, #FF9F43 0%, #E8600A 100%);
+            --gradient-gold-saffron: linear-gradient(135deg, #F5C842 0%, #E8600A 100%);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans Devanagari', system-ui, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Yatra One', 'Noto Sans Devanagari', cursive; }
+
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; cursor: pointer; }
+
+        /* ── Language Logic ── */
+        .lang-en, .lang-gu, .lang-en-inline, .lang-gu-inline { display: none !important; }
+        .lang-hi { display: block !important; }
+        .lang-hi-inline { display: inline !important; }
+
+        html[data-lang="en"] .lang-en { display: block !important; }
+        html[data-lang="en"] .lang-hi, html[data-lang="en"] .lang-gu { display: none !important; }
+        html[data-lang="en"] .lang-en-inline { display: inline !important; }
+        html[data-lang="en"] .lang-hi-inline, html[data-lang="en"] .lang-gu-inline { display: none !important; }
+
+        html[data-lang="gu"] .lang-gu { display: block !important; }
+        html[data-lang="gu"] .lang-hi, html[data-lang="gu"] .lang-en { display: none !important; }
+        html[data-lang="gu"] .lang-gu-inline { display: inline !important; }
+        html[data-lang="gu"] .lang-hi-inline, html[data-lang="gu"] .lang-en-inline { display: none !important; }
+
+        /* ── Top Strip ── */
+        .top-strip {
+            background: var(--dark-earth);
+            color: rgba(255,255,255,0.75);
+            text-align: center;
+            font-size: 0.76rem;
+            padding: 6px 20px;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(245,200,66,0.2);
+        }
+        .top-strip strong { color: var(--light-gold); }
+
+        /* ── Header & Nav ── */
+        header {
+            background: rgba(30,15,2,0.92);
+            backdrop-filter: blur(18px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1.5px solid var(--saffron);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.45);
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .logo { display: flex; align-items: center; gap: 13px; text-decoration: none; flex-shrink: 0; }
+        .logo-circle {
+            width: 68px; height: 68px;
+            background: url("./images/guashala_logo.png") center/cover no-repeat;
+            border-radius: 50%;
+        }
+        .logo-text .name {
+            font-family: "Yatra One", cursive;
+            font-size: 1.32rem;
+            color: var(--light-gold);
+            line-height: 1.2;
+            display: block;
+        }
+        .logo-text .tagline {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.45);
+            text-transform: uppercase;
+            display: block;
+            margin-top: 2px;
+        }
+        .nav-links { display: flex; gap: 2px; list-style: none; align-items: center; }
+        .nav-links a {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            height: 38px;
+            white-space: nowrap;
+        }
+        .nav-links a:not(.nav-donate):hover { color: var(--light-gold) !important; }
+        .nav-links a:not(.nav-donate)::after {
+            content: "";
+            position: absolute;
+            bottom: 4px; left: 14px; right: 14px;
+            height: 1.5px;
+            background: var(--light-gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:not(.nav-donate):hover::after { transform: scaleX(1); transform-origin: left; }
+        .nav-links a.active-nav { color: var(--light-gold) !important; }
+        .nav-links a.active-nav::after { transform: scaleX(1); }
+
+        .nav-donate {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            padding: 6px 22px 6px 6px !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(232,96,10,0.35);
+            display: inline-flex !important;
+            align-items: center !important;
+        }
+        .heart-circle {
+            width: 26px; height: 26px;
+            background: #fff; color: #e31b23;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 8px;
+        }
+        .heart-svg { width: 12px; height: 12px; fill: currentColor; }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.07);
+            border: 1.5px solid rgba(212,146,10,0.25);
+            border-radius: 30px;
+            padding: 4px;
+            gap: 4px;
+        }
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 24px;
+            font-size: 0.78rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: rgba(255,255,255,0.65);
+        }
+        .lang-btn.active { background: var(--gradient-gold-saffron); color: white; }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1.5px solid rgba(212,146,10,0.4);
+            color: var(--light-gold);
+            font-size: 1.5rem;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        .custom-lang-dropdown { position: relative; display: none; z-index: 1000; }
+        .custom-lang-btn {
+            background: rgba(30,15,2,0.95) !important;
+            border: 1px solid var(--gold) !important;
+            border-radius: 6px !important;
+            color: var(--light-gold) !important;
+            padding: 5px 10px !important;
+            font-size: 0.72rem !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            height: 28px !important;
+        }
+        .custom-lang-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 4px); right: 0;
+            background: #2C1A06 !important;
+            border: 1px solid var(--gold) !important;
+            border-radius: 6px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+            width: 100px !important;
+            overflow: hidden !important;
+            z-index: 2000 !important;
+        }
+        .custom-lang-options.show { display: block !important; }
+        .custom-lang-option {
+            color: var(--light-gold) !important;
+            padding: 9px 12px !important;
+            font-size: 0.75rem !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            border-bottom: 1px solid rgba(212,146,10,0.1) !important;
+        }
+        .custom-lang-option:hover { background: rgba(212,146,10,0.2) !important; }
+
+        /* ── Page Hero ── */
+        .page-hero {
+            background: linear-gradient(135deg, var(--dark-earth) 0%, var(--mid-earth) 60%, #2A1205 100%);
+            padding: 64px 24px 56px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--saffron);
+        }
+        .page-hero h1 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: var(--light-gold);
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .page-hero p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 620px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232,96,10,0.18);
+            border: 1px solid rgba(232,96,10,0.4);
+            color: var(--pale-gold);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ── Tab Navigation ── */
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            background: var(--dark-earth);
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 72px;
+            z-index: 100;
+        }
+        .tab-btn {
+            flex: 1;
+            max-width: 300px;
+            padding: 16px 32px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: rgba(255,255,255,0.55);
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Yatra One', cursive;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+        .tab-btn:hover { color: var(--light-gold); background: rgba(245,200,66,0.05); }
+        .tab-btn.active {
+            color: var(--light-gold);
+            border-bottom-color: var(--saffron);
+            background: rgba(232,96,10,0.08);
+        }
+
+        /* ── Main Content ── */
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .tab-content { display: none; padding-top: 52px; }
+        .tab-content.active { display: block; }
+
+        /* Effective Date Banner */
+        .effective-banner {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(135deg, rgba(232,96,10,0.08), rgba(212,146,10,0.06));
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--saffron);
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 40px;
+        }
+        .effective-banner .icon { font-size: 1.8rem; }
+        .effective-banner strong { color: var(--saffron); font-size: 0.9rem; display: block; margin-bottom: 2px; }
+        .effective-banner span { color: var(--text-mid); font-size: 0.85rem; }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
+            padding: 36px 40px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(74,40,8,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        .section-card:hover { box-shadow: 0 8px 32px rgba(74,40,8,0.10); }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px; height: 38px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-right: 14px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--border-light);
+        }
+        .section-title {
+            font-family: 'Yatra One', 'Noto Sans Devanagari', cursive;
+            font-size: 1.25rem;
+            color: var(--mid-earth);
+        }
+        .section-card p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        .section-card p:last-child { margin-bottom: 0; }
+        .section-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+        .section-card ul li {
+            color: var(--text-mid);
+            font-size: 0.93rem;
+            padding: 8px 0 8px 28px;
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .section-card ul li:last-child { border-bottom: none; }
+        .section-card ul li::before {
+            content: "🐄";
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+        }
+
+        .section-card ol {
+            list-style: none;
+            counter-reset: item;
+            padding: 0;
+            margin: 12px 0;
+        }
+        .section-card ol li {
+            color: var(--text-mid);
+            font-size: 0.93rem;
+            padding: 8px 0 8px 28px;
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .section-card ol li:last-child { border-bottom: none; }
+        .section-card ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(30,92,42,0.06), rgba(58,128,72,0.04));
+            border: 1px solid rgba(30,92,42,0.2);
+            border-left: 4px solid var(--green-pasture);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .highlight-box p { color: var(--green-pasture) !important; font-weight: 500; margin: 0 !important; }
+
+        .warning-box {
+            background: rgba(232,96,10,0.06);
+            border: 1px solid rgba(232,96,10,0.25);
+            border-left: 4px solid var(--saffron);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .warning-box p { color: var(--rust) !important; font-weight: 500; margin: 0 !important; }
+
+        /* Contact Info Card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--dark-earth), var(--mid-earth));
+            border-radius: 18px;
+            padding: 36px 40px;
+            text-align: center;
+            margin-top: 48px;
+            border: 1px solid rgba(245,200,66,0.2);
+        }
+        .contact-card h3 {
+            color: var(--light-gold);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .contact-card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 6px; }
+        .contact-card .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(245,200,66,0.2);
+            border-radius: 10px;
+            padding: 12px 24px;
+            margin: 8px;
+            color: var(--pale-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .contact-card .contact-item:hover { background: rgba(255,255,255,0.1); }
+        .contact-card a.contact-item { color: var(--pale-gold); text-decoration: none; }
+
+        /* ── Footer ── */
+        footer {
+            background: linear-gradient(180deg, #1A0D02 0%, #0E0701 100%);
+            border-top: 2px solid var(--saffron);
+            padding: 56px 24px 0;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-brand .logo-text .name {
+            font-family: "Yatra One", cursive;
+            font-size: 1.25rem;
+            color: var(--light-gold);
+            display: block;
+        }
+        .footer-brand .logo-text .tagline {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            display: block;
+            margin-top: 2px;
+            margin-bottom: 14px;
+        }
+        .footer-brand p { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+        .footer-socials { display: flex; gap: 12px; margin-top: 4px; }
+        .footer-socials a {
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(245,200,66,0.2);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+            color: var(--light-gold);
+            transition: all 0.2s;
+        }
+        .footer-socials a:hover { background: var(--saffron); border-color: var(--saffron); color: white; }
+        .footer-col h4 {
+            font-family: "Yatra One", cursive;
+            color: var(--light-gold);
+            font-size: 1rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(245,200,66,0.15);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { color: rgba(255,255,255,0.55); font-size: 0.88rem; transition: color 0.2s; }
+        .footer-col ul a:hover { color: var(--light-gold); }
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .footer-bottom span { color: rgba(255,255,255,0.4); font-size: 0.78rem; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            nav { padding: 8px 10px !important; }
+            .logo-circle { display: none !important; }
+            .logo-text .name { font-size: 0.85rem !important; }
+            .menu-toggle { display: block !important; order: 1; }
+            .logo { order: 2; flex-grow: 1; justify-content: center; }
+            .custom-lang-dropdown { display: inline-block !important; order: 3; }
+            .lang-toggle { display: none !important; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: linear-gradient(180deg, #2C1A06, var(--dark-earth)); padding: 20px; z-index: 999; }
+            .nav-links.active { display: flex !important; }
+            .nav-links a { display: block; padding: 10px; text-align: center; }
+            .footer-main { grid-template-columns: 1fr; gap: 28px; }
+            .section-card { padding: 24px 20px; }
+            .tab-btn { font-size: 0.82rem; padding: 14px 16px; }
+            .tab-nav { top: 62px; }
+            .contact-card { padding: 28px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP STRIP -->
+    <div class="top-strip">
+        🕉️ &nbsp;
+        <span class="lang-hi-inline"><strong>जय बाबा रामदेव जी</strong> &nbsp;•&nbsp; 24/7 गौ सेवा जारी है — गौशाला रामदेवरा, राजस्थान &nbsp;•&nbsp; सेवा: <strong>📞 +91 94142 87654</strong></span>
+        <span class="lang-gu-inline"><strong>જય બાબા રામદેવ જી</strong> &nbsp;•&nbsp; ૨૪/૭ ગૌ સેવા ચાલુ છે — ગૌશાળા રામદેવરા, રાજસ્થાન &nbsp;•&nbsp; <strong>📞 +91 94142 87654</strong></span>
+        <span class="lang-en-inline"><strong>Jai Baba Ramdev Ji</strong> &nbsp;•&nbsp; 24/7 Gau Seva — Ramdevra, Pokaran, Rajasthan &nbsp;•&nbsp; <strong>📞 +91 94142 87654</strong></span>
+        &nbsp; 🕉️
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a class="logo" href="index.html">
+                <div class="logo-circle"></div>
+                <div class="logo-text">
+                    <span class="name lang-hi">जय बाबा रामदेव गौसेवा समिति</span>
+                    <span class="name lang-gu">જય બાબા રામદેવ ગૌસેવા સમિતિ</span>
+                    <span class="name lang-en">Jai Baba Ramdev Gauseva Samiti</span>
+                    <span class="tagline lang-hi">गौशाला रामदेवरा, राजस्थान</span>
+                    <span class="tagline lang-gu">ગૌશાળા રામદેવરા, રાજસ્થાન</span>
+                    <span class="tagline lang-en">Gaushala Ramdevra, Rajasthan</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><span class="lang-hi-inline">होम पेज</span><span class="lang-gu-inline">હોમ પેજ</span><span class="lang-en-inline">Home Page</span></a></li>
+                <li><a href="about.html"><span class="lang-hi-inline">हमारे बारे में</span><span class="lang-gu-inline">અમારા વિશે</span><span class="lang-en-inline">About Us</span></a></li>
+                <li><a href="Our_Work.html"><span class="lang-hi-inline">हमारे कार्य</span><span class="lang-gu-inline">અમારા કાર્યો</span><span class="lang-en-inline">Our Work</span></a></li>
+                <li><a href="transprancy.html"><span class="lang-hi-inline">पारदर्शिता</span><span class="lang-gu-inline">પારદર્શિતા</span><span class="lang-en-inline">Transparency</span></a></li>
+                <li><a href="contact.html"><span class="lang-hi-inline">संपर्क करें</span><span class="lang-gu-inline">સંપર્ક કરો</span><span class="lang-en-inline">Contact Us</span></a></li>
+                <li>
+                    <a href="index.html#donate" class="nav-donate">
+                        <span class="heart-circle"><svg class="heart-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+                        <span class="lang-hi-inline">दान करें</span><span class="lang-gu-inline">દાન કરો</span><span class="lang-en-inline">Donate</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="lang-toggle">
+                <button class="lang-btn active" id="btn-hi" onclick="setLang('hi')">हिंदी</button>
+                <button class="lang-btn" id="btn-gu" onclick="setLang('gu')">ગુજરાતી</button>
+                <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+            </div>
+
+            <div class="custom-lang-dropdown">
+                <button class="custom-lang-btn" onclick="toggleCustomLangDropdown(event)" type="button">
+                    <span class="current-lang-text">हिंदी</span>
+                    <span style="font-size:0.55rem;color:var(--gold)">▼</span>
+                </button>
+                <div class="custom-lang-options">
+                    <div class="custom-lang-option" onclick="changeLangCustom('hi')">हिंदी</div>
+                    <div class="custom-lang-option" onclick="changeLangCustom('gu')">ગુજરાતી</div>
+                    <div class="custom-lang-option" onclick="changeLangCustom('en')">English</div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        
+        <h1>
+            <span class="lang-hi">नियम, शर्तें एवं गोपनीयता नीति</span>
+            <span class="lang-gu">નિયમો, શરતો અને ગોપનીયતા નીતિ</span>
+            <span class="lang-en">Terms, Conditions & Privacy Policy</span>
+        </h1>
+        <p>
+            <span class="lang-hi-inline">जय बाबा रामदेव गौसेवा समिति गौशाला रामदेवरा — पंजीकृत NGO | 80G प्रमाणित | गौशाला रामदेवरा, राजस्थान</span>
+            <span class="lang-gu-inline">જય બાબા રામદેવ ગૌસેવા સમિતિ ગૌશાળા રામદેવરા — રજિસ્ટર્ડ NGO | 80G પ્રમાણિત | ગૌશાળા રામદેવરા, રાજસ્થાન</span>
+            <span class="lang-en-inline">Jai Baba Ramdev Gauseva Samiti Gaushala Ramdevra — Registered NGO | 80G Certified | Gaushala Ramdevra, Rajasthan</span>
+        </p>
+    </section>
+
+    <!-- TAB NAVIGATION -->
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('terms', this)">
+            <span class="lang-hi-inline">📜 नियम एवं शर्तें</span>
+            <span class="lang-gu-inline">📜 નિયમો અને શરતો</span>
+            <span class="lang-en-inline">📜 Terms & Conditions</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('privacy', this)">
+            <span class="lang-hi-inline">🔒 गोपनीयता नीति</span>
+            <span class="lang-gu-inline">🔒 ગોપનીયતા નીતિ</span>
+            <span class="lang-en-inline">🔒 Privacy Policy</span>
+        </button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content-wrapper">
+
+        <!-- ═══════════════ TERMS & CONDITIONS ═══════════════ -->
+        <div id="terms" class="tab-content active">
+
+            <div class="effective-banner">
+                <div class="icon">📅</div>
+                <div>
+                    <strong><span class="lang-hi-inline">प्रभावी तिथि: 1 जनवरी 2025</span><span class="lang-gu-inline">અમલ તારીખ: 1 જાન્યુઆરી 2025</span><span class="lang-en-inline">Effective Date: 1 January 2025</span></strong>
+                    <span><span class="lang-hi-inline">इस वेबसाइट का उपयोग करके आप इन नियमों से सहमत होते हैं।</span><span class="lang-gu-inline">આ વેબસાઇટ ઉપયોગ કરીને તમે આ નિયમો સ્વીકારો છો.</span><span class="lang-en-inline">By using this website, you agree to these terms.</span></span>
+                </div>
+            </div>
+
+            <!-- 1. Organization -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">संस्था परिचय</span>
+                        <span class="lang-gu">સંસ્થા પરિચય</span>
+                        <span class="lang-en">About the Organization</span>
+                    </h2>
+                </div>
+                <p class="lang-hi"><strong>जय बाबा रामदेव गौसेवा समिति</strong> राजस्थान के रामदेवरा में स्थित एक पंजीकृत गैर-लाभकारी संगठन (NGO) है। यह संस्था गौ माता के संरक्षण, आश्रय, चिकित्सा एवं सेवा के पवित्र उद्देश्य से स्थापित की गई है। हम भारतीय समाज में गौवंश की रक्षा एवं गौशाला प्रबंधन हेतु सक्रिय रूप से कार्यरत हैं।</p>
+                <p class="lang-gu"><strong>જય બાબા રામદેવ ગૌસેવા સમિતિ</strong> રાજસ્થાનના રામદેવરામાં સ્થિત એક રજિસ્ટર્ડ બિન-નફાકારક સંસ્થા (NGO) છે. આ સંસ્થા ગૌ માતાના રક્ષણ, આશ્રય, ચિકિત્સા અને સેવાના પવિત્ર ઉદ્દેશ્ય સાથે સ્થાપિત કરવામાં આવી છે. અમે ભારતીય સમાજમાં ગૌવંશ રક્ષા માટે સક્રિય રીતે કાર્ય કરીએ છીએ.</p>
+                <p class="lang-en"><strong>Jai Baba Ramdev Gauseva Samiti</strong> is a registered non-profit organization (NGO) located in Ramdevra, Rajasthan. This institution is established with the sacred purpose of protecting, sheltering, treating, and serving Gau Mata (cows). We actively work for the protection of cattle and management of the Gaushala in Indian society.</p>
+                <div class="highlight-box">
+                    <p>🕉️ <span class="lang-hi-inline">यह संस्था बाबा रामदेव जी की पवित्र भूमि रामदेवरा पर स्थित है — पंजीकृत NGO | 80G कर-छूट प्रमाणित</span><span class="lang-gu-inline">આ સંસ્થા બાબા રામદેવ જીની પવિત્ર ભૂમિ રામદેવરા પર સ્થિત છે — રજિસ્ટર્ડ NGO | 80G કર-મુક્તિ પ્રમાણિત</span><span class="lang-en-inline">This institution is located on the sacred land of Baba Ramdev Ji at Ramdevra — Registered NGO | 80G Tax Exemption Certified</span></p>
+                </div>
+            </div>
+
+            <!-- 2. Website Use -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">वेबसाइट उपयोग की शर्तें</span>
+                        <span class="lang-gu">વેબસાઇટ ઉપયોગની શરતો</span>
+                        <span class="lang-en">Website Usage Terms</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">इस वेबसाइट का उपयोग करते समय निम्नलिखित शर्तों का पालन अनिवार्य है:</p>
+                <p class="lang-gu">આ વેબસાઇટ ઉપયોગ કરતી વખતે નીચેની શરતોનું પાલન ફરજિયાત છે:</p>
+                <p class="lang-en">The following conditions are mandatory when using this website:</p>
+                <ul>
+                    <li><span class="lang-hi-inline">वेबसाइट की सामग्री केवल सूचनात्मक एवं सेवा उद्देश्यों के लिए है।</span><span class="lang-gu-inline">વેબસાઇટ સામગ્રી ફક્ત માહિતી અને સેવા હેતુઓ માટે છે.</span><span class="lang-en-inline">Website content is for informational and service purposes only.</span></li>
+                    <li><span class="lang-hi-inline">इस वेबसाइट की किसी भी सामग्री को बिना अनुमति के कॉपी, वितरित या व्यावसायिक उपयोग नहीं किया जा सकता।</span><span class="lang-gu-inline">વેબસાઇટની કોઈ પણ સામગ્રી પરવાનગી વિના કોપી, વિતરણ અથવા વ્યાવસાયિક ઉપયોગ કરી શકાય નહીં.</span><span class="lang-en-inline">No content from this website may be copied, distributed, or commercially used without permission.</span></li>
+                    <li><span class="lang-hi-inline">उपयोगकर्ता वेबसाइट पर किसी भी अवैध, आपत्तिजनक या हानिकारक गतिविधि नहीं करेंगे।</span><span class="lang-gu-inline">વપરાશકર્તાઓ વેબસાઇટ પર કોઈ ગેરકાનૂની, આપત્તિજનક અથવા હાનિકારક પ્રવૃત્તિ કરશે નહીં.</span><span class="lang-en-inline">Users shall not engage in any illegal, objectionable, or harmful activity on the website.</span></li>
+                    <li><span class="lang-hi-inline">18 वर्ष से कम आयु के उपयोगकर्ता माता-पिता या अभिभावक की देखरेख में वेबसाइट का उपयोग करें।</span><span class="lang-gu-inline">18 વર્ષથી ઓછી ઉંમરના વપરાશકર્તાઓ માતા-પિતા અથવા વાલીની દેખરેખ હેઠળ વેબસાઇટ ઉપયોગ કરે.</span><span class="lang-en-inline">Users under 18 years of age should use the website under parental or guardian supervision.</span></li>
+                </ul>
+            </div>
+
+            <!-- 3. Donations -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">दान एवं आर्थिक सहयोग</span>
+                        <span class="lang-gu">દાન અને આર્થિક સહયોગ</span>
+                        <span class="lang-en">Donations & Financial Support</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">गौशाला रामदेवरा को किए गए सभी दान पूर्णतः गौ सेवा कार्यों हेतु उपयोग किए जाते हैं। दान संबंधित महत्वपूर्ण जानकारी:</p>
+                <p class="lang-gu">ગૌશાળા રામદેવરાને આપેલ તમામ દાન સંપૂર્ણ રૂપે ગૌ સેવા કાર્યો માટે ઉપયોગ કરવામાં આવે છે. દાન સંબંધિત મહત્વની માહિતી:</p>
+                <p class="lang-en">All donations made to Gaushala Ramdevra are exclusively used for Gau Seva activities. Important information regarding donations:</p>
+                <ul>
+                    <li><span class="lang-hi-inline">सभी दान भारतीय आयकर अधिनियम की धारा 80G के अंतर्गत कर-मुक्त हैं।</span><span class="lang-gu-inline">તમામ દાન ભારતીય આવકવેરા અધિનિયમ ની કલમ 80G હેઠળ કર-મુક્ત છે.</span><span class="lang-en-inline">All donations are tax-exempt under Section 80G of the Indian Income Tax Act.</span></li>
+                    <li><span class="lang-hi-inline">दान की राशि वापस नहीं की जाएगी, जब तक तकनीकी या बैंकिंग त्रुटि न हो।</span><span class="lang-gu-inline">ટેકનિકલ અથવા બેન્કિંગ ભૂલ સિવાય દાન રકમ પરત નહીં કરવામાં આવે.</span><span class="lang-en-inline">Donation amounts are non-refundable unless due to a technical or banking error.</span></li>
+                    <li><span class="lang-hi-inline">प्रत्येक दानकर्ता को 80G रसीद एवं उपयोग प्रमाण-पत्र प्रदान किया जाएगा।</span><span class="lang-gu-inline">દરેક દાતાને 80G રસીદ અને ઉપયોગ પ્રમાણ-પત્ર આપવામાં આવશે.</span><span class="lang-en-inline">Every donor will be provided with an 80G receipt and usage certificate.</span></li>
+                    <li><span class="lang-hi-inline">गाय गोद लेने, चारा दान एवं शेड प्रायोजन की राशि का उपयोग उसी कार्य हेतु किया जाएगा।</span><span class="lang-gu-inline">ગાય દત્તક, ઘાસ દાન અને શેડ સ્પોન્સorshipની રકમ તે જ કાર્ય માટે ઉપયોગ કરવામાં આવશે.</span><span class="lang-en-inline">Amounts for cow adoption, fodder donation, and shed sponsorship will be used for those specific purposes.</span></li>
+                    <li><span class="lang-hi-inline">オンライン दान के लिए हम सुरक्षित पेमेंट गेटवे का उपयोग करते हैं।</span><span class="lang-gu-inline">ઓનલાઇન દાન માટે અમે સુરક્ષિત પેમેન્ટ ગેટવે ઉપયોગ કરીએ છીએ.</span><span class="lang-en-inline">We use secure payment gateways for online donations.</span></li>
+                </ul>
+                <div class="highlight-box">
+                    <p>🐄 <span class="lang-hi-inline">आपका प्रत्येक दान किसी गौमाता के जीवन में नई उम्मीद लाता है। सेवा ही पूजा है।</span><span class="lang-gu-inline">તમારું દરેક દાન ગૌ માતાના જીવનમાં નવી આશા લાવે છે. સેવા હી પૂજા હૈ.</span><span class="lang-en-inline">Your every donation brings new hope to a Gau Mata's life. Service is worship.</span></p>
+                </div>
+            </div>
+
+            <!-- 4. Products -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">4</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">गौशाला उत्पाद एवं सेवाएं</span>
+                        <span class="lang-gu">ગૌશાળા ઉત્પાદો અને સેવાઓ</span>
+                        <span class="lang-en">Gaushala Products & Services</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">हमारी गौशाला द्वारा निर्मित उत्पाद जैसे A2 देसी घी, गोमूत्र अर्क, पंचगव्य साबुन, गोबर दीया एवं जैविक खाद शुद्ध एवं प्राकृतिक हैं। उत्पाद संबंधित शर्तें:</p>
+                <p class="lang-gu">અમારી ગૌશાળા દ્વારા નિર્મિત ઉત્પાદો જેવા A2 દેશી ઘી, ગૌમૂત્ર અર્ક, પંચગવ્ય સાબુ, છાણના દીવા અને જૈવિક ખાતર શુદ્ધ અને પ્રાકૃતિક છે. ઉત્પાદ સંબંધી શરતો:</p>
+                <p class="lang-en">Products manufactured by our Gaushala, such as A2 Desi Ghee, Gomutra Ark, Panchagavya Soap, Gobar Diya, and Organic Fertilizer, are pure and natural. Product-related terms:</p>
+                <ul>
+                    <li><span class="lang-hi-inline">सभी उत्पाद गौशाला परिसर में पारंपरिक विधि से निर्मित हैं।</span><span class="lang-gu-inline">તમામ ઉત્પાદો ગૌશાળા પરિસરમાં પારંપરિક વિધિથી નિર્મિત છે.</span><span class="lang-en-inline">All products are manufactured using traditional methods within the Gaushala premises.</span></li>
+                    <li><span class="lang-hi-inline">उत्पाद की उपलब्धता मौसम एवं उत्पादन क्षमता पर निर्भर करती है।</span><span class="lang-gu-inline">ઉત્પાદોની ઉપલબ્ધતા મોસમ અને ઉત્પાદન ક્ષમતા પર નિર્ભર કરે છે.</span><span class="lang-en-inline">Product availability depends on season and production capacity.</span></li>
+                    <li><span class="lang-hi-inline">किसी स्वास्थ्य समस्या हेतु उत्पाद उपयोग से पूर्व चिकित्सक की सलाह लें।</span><span class="lang-gu-inline">સ્વાસ્થ્ય સમસ્યા માટે ઉત્પાદ ઉપયોગ પહેલાં ચિકિત્સક ની સલાહ લો.</span><span class="lang-en-inline">Consult a doctor before using products for any health issues.</span></li>
+                </ul>
+            </div>
+
+            <!-- 5. Intellectual Property -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">5</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">बौद्धिक संपदा अधिकार</span>
+                        <span class="lang-gu">બૌદ્ધિક સંપદા અધિકાર</span>
+                        <span class="lang-en">Intellectual Property Rights</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">इस वेबसाइट पर उपलब्ध समस्त सामग्री — लोगो, चित्र, वीडियो, पाठ्य सामग्री एवं डिज़ाइन — जय बाबा रामदेव गौसेवा समिति की संपत्ति है। बिना लिखित अनुमति के किसी भी सामग्री का पुनः उपयोग, कॉपी या वितरण प्रतिबंधित है।</p>
+                <p class="lang-gu">આ વેબસાઇટ પર ઉપલબ્ધ તમામ સામગ્રી — લોગો, ચિત્રો, વીડિયો, લખાણ અને ડિઝાઇન — જય બાબા રામદેવ ગૌસેવા સમિતિ ની સંપત્તિ છે. લેખિત પરવાનગી વગર કોઈ સામગ્રી નો પુનઃ ઉપયોગ, કોપી કે વિતરણ પ્રતિબંધિત છે.</p>
+                <p class="lang-en">All content available on this website — logo, images, videos, textual content, and design — is the property of Jai Baba Ramdev Gauseva Samiti. Reuse, copying, or distribution of any content without written permission is prohibited.</p>
+                <div class="warning-box">
+                    <p>⚠️ <span class="lang-hi-inline">अनधिकृत उपयोग पर कानूनी कार्रवाई की जा सकती है।</span><span class="lang-gu-inline">અનધિકૃત ઉપયોગ પર કાનૂની કાર્યવાહી થઈ શકે છે.</span><span class="lang-en-inline">Unauthorized use may result in legal action.</span></p>
+                </div>
+            </div>
+
+            <!-- 6. Limitation of Liability -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">6</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">दायित्व सीमा</span>
+                        <span class="lang-gu">જવાબદારી મર્યાદા</span>
+                        <span class="lang-en">Limitation of Liability</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">जय बाबा रामदेव गौसेवा समिति इस वेबसाइट पर दी गई जानकारी की सटीकता सुनिश्चित करने का प्रयास करती है, परंतु किसी भी तकनीकी त्रुटि, अस्थायी अनुपलब्धता या जानकारी में परिवर्तन के लिए संस्था उत्तरदायी नहीं होगी। वेबसाइट उपयोग से होने वाले किसी भी प्रत्यक्ष या अप्रत्यक्ष नुकसान की संस्था जिम्मेदार नहीं है।</p>
+                <p class="lang-gu">જય બાબા રામદેવ ગૌસેવા સમિતિ વેબસાઇટ પર આપેલી માહિતી ની ચોકસાઈ સુનિશ્ચિત કરવાનો પ્રયાસ કરે છે, પરંતુ કોઈ પણ ટેકનિકલ ભૂલ, અસ્થાયી અનુપલબ્ધતા કે માહિતીમાં ફેરફાર માટે સંસ્થા જવાબદાર રહેશે નહીં.</p>
+                <p class="lang-en">Jai Baba Ramdev Gauseva Samiti strives to ensure the accuracy of information on this website, but shall not be responsible for any technical errors, temporary unavailability, or changes in information. The institution is not liable for any direct or indirect damage arising from website use.</p>
+            </div>
+
+            <!-- 7. Governing Law -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">7</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">लागू कानून एवं अधिकारक्षेत्र</span>
+                        <span class="lang-gu">લાગુ કાયદો અને અધિકારક્ષેત્ર</span>
+                        <span class="lang-en">Governing Law & Jurisdiction</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">इन नियमों एवं शर्तों पर भारत गणराज्य के कानून लागू होंगे। किसी भी विवाद की स्थिति में जोधपुर, राजस्थान के न्यायालयों का अधिकारक्षेत्र मान्य होगा।</p>
+                <p class="lang-gu">આ નિયમો અને શરતો પર ભારત ગણરાજ્ય ના કાયદા લાગુ થશે. કોઈ વિવાદ ની સ્થિતિ માં જોધપુર, રાજસ્થાન ના ન્યાયાલયો નું અધિકારક્ષેત્ર માન્ય રહેશે.</p>
+                <p class="lang-en">The laws of the Republic of India shall apply to these terms and conditions. In case of any dispute, the jurisdiction of courts in Jodhpur, Rajasthan shall be applicable.</p>
+            </div>
+
+            <!-- Contact for Terms -->
+            <div class="contact-card">
+                <h3>🙏 <span class="lang-hi-inline">नियमों संबंधी प्रश्न</span><span class="lang-gu-inline">નિયમો સંબંધી પ્રશ્નો</span><span class="lang-en-inline">Questions About Terms</span></h3>
+                <p><span class="lang-hi-inline">किसी भी प्रश्न या स्पष्टीकरण के लिए हमसे संपर्क करें:</span><span class="lang-gu-inline">કોઈ પણ પ્રશ્ન અથવા સ્પષ્ટીકરણ માટે અમારો સંપર્ક કરો:</span><span class="lang-en-inline">Contact us for any questions or clarifications:</span></p>
+                <div style="margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center;">
+                    <a href="tel:+919414287654" class="contact-item">📞 +91 94142 87654</a>
+                    <a href="tel:+918368703510" class="contact-item">🚨 Rescue: 8368703510</a>
+                    <a href="contact.html" class="contact-item">✉️ <span class="lang-hi-inline">संपर्क पृष्ठ</span><span class="lang-gu-inline">સંપર્ક પૃષ્ઠ</span><span class="lang-en-inline">Contact Page</span></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═══════════════ PRIVACY POLICY ═══════════════ -->
+        <div id="privacy" class="tab-content">
+
+            <div class="effective-banner">
+                <div class="icon">🔒</div>
+                <div>
+                    <strong><span class="lang-hi-inline">अंतिम अद्यतन: 1 जनवरी 2025</span><span class="lang-gu-inline">છેલ્લો સુધારો: 1 જાન્યુઆરી 2025</span><span class="lang-en-inline">Last Updated: 1 January 2025</span></strong>
+                    <span><span class="lang-hi-inline">हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं।</span><span class="lang-gu-inline">અમે તમારી ગોપનીયતા ની રક્ષા માટે કટિબદ્ધ છીએ.</span><span class="lang-en-inline">We are committed to protecting your privacy.</span></span>
+                </div>
+            </div>
+
+            <!-- P1. Data Collection -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">एकत्र की जाने वाली जानकारी</span>
+                        <span class="lang-gu">એકત્ર કરવામાં આવતી માહિતી</span>
+                        <span class="lang-en">Information We Collect</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">जब आप हमारी वेबसाइट पर दान करते हैं, संपर्क फ़ॉर्म भरते हैं, या गाय गोद लेने हेतु पंजीकरण करते हैं, तो हम निम्न जानकारी एकत्र कर सकते हैं:</p>
+                <p class="lang-gu">જ્યારે તમે અમારી વેબસાઇટ પર દાન કરો, સંપર્ક ફોર્મ ભરો, અથવા ગાય દત્તક માટે રજીસ્ટ્રેશન કરો ત્યારે અમે નીચેની માહિતી એકત્ર કરી શકીએ છીએ:</p>
+                <p class="lang-en">When you donate on our website, fill a contact form, or register for cow adoption, we may collect the following information:</p>
+                <ol>
+                    <li><span class="lang-hi-inline">नाम, mobile नंबर एवं ईमेल पता</span><span class="lang-gu-inline">નામ, મોબાઈલ નંબર અને ઈમેલ સરનામું</span><span class="lang-en-inline">Name, mobile number, and email address</span></li>
+                    <li><span class="lang-hi-inline">डाक पता (80G रसीद एवं प्रमाण-पत्र के लिए)</span><span class="lang-gu-inline">ટપાલ સરનામું (80G રસીદ અને પ્રમાણપત્ર માટે)</span><span class="lang-en-inline">Postal address (for 80G receipt and certificate)</span></li>
+                    <li><span class="lang-hi-inline">PAN नंबर (आयकर छूट हेतु, जहाँ लागू हो)</span><span class="lang-gu-inline">PAN નંબર (આવકવેરા મુક્તિ માટે, જ્યાં લાગુ હોય)</span><span class="lang-en-inline">PAN number (for income tax exemption, where applicable)</span></li>
+                    <li><span class="lang-hi-inline">भुगतान जानकारी (केवल सुरक्षित पेमेंट गेटवे के माध्यम से)</span><span class="lang-gu-inline">ચુકવણીની માહિતી (ફક્ત સુરક્ષિત પેમેન્ટ ગેટવે દ્વારા)</span><span class="lang-en-inline">Payment information (only through secure payment gateway)</span></li>
+                    <li><span class="lang-hi-inline">वेबसाइट ब्राउज़िंग डेटा (IP पता, ब्राउज़र प्रकार — Google Analytics के माध्यम से)</span><span class="lang-gu-inline">વેબસાઇટ બ્રાઉઝિંગ ડેટા (IP સરનામું, બ્રાઉઝર પ્રકાર — Google Analytics દ્વારા)</span><span class="lang-en-inline">Website browsing data (IP address, browser type — via Google Analytics)</span></li>
+                </ol>
+            </div>
+
+            <!-- P2. Use of Information -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">जानकारी का उपयोग</span>
+                        <span class="lang-gu">માહિતીનો ઉપયોગ</span>
+                        <span class="lang-en">Use of Information</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">आपके द्वारा प्रदान की गई जानकारी का उपयोग निम्न उद्देश्यों हेतु किया जाता है:</p>
+                <p class="lang-gu">તમારા દ્વારા આપેલી માહિતી નો ઉપયોગ નીચેના ઉદ્દેશ્યો માટે કરવામાં આવે છે:</p>
+                <p class="lang-en">Information provided by you is used for the following purposes:</p>
+                <ol>
+                    <li><span class="lang-hi-inline">दान रसीद, 80G प्रमाण-पत्र एवं आभार पत्र भेजने हेतु</span><span class="lang-gu-inline">દાન રસીદ, 80G પ્રમાણપત્ર અને આભાર પત્ર મોકલવા માટે</span><span class="lang-en-inline">To send donation receipt, 80G certificate, and acknowledgment letter</span></li>
+                    <li><span class="lang-hi-inline">गाय गोद लेने की प्रक्रिया एवं अद्यतन जानकारी हेतु</span><span class="lang-gu-inline">ગાય દત્તક પ્રક્રિયા અને અપડેટ માહિતી માટે</span><span class="lang-en-inline">For cow adoption process and updates</span></li>
+                    <li><span class="lang-hi-inline">गौशाला समाचार, गौ सेवा कार्यक्रम एवं पारदर्शिता रिपोर्ट साझा करने हेतु</span><span class="lang-gu-inline">ગૌશાળા સમાચાર, ગૌ સેવા કાર્યક્રમ અને પારદર્શિતા રિપોર્ટ શેર કરવા માટે</span><span class="lang-en-inline">To share Gaushala news, Gau Seva programs, and transparency reports</span></li>
+                    <li><span class="lang-hi-inline">वेबसाइट सुधार एवं उपयोगकर्ता अनुभव बेहतर बनाने हेतु</span><span class="lang-gu-inline">વેબસાઇટ સુધારણા અને વપરાશકર્તા અનુભવ બહેતર બનાવવા માટે</span><span class="lang-en-inline">For website improvement and better user experience</span></li>
+                </ol>
+                <div class="highlight-box">
+                    <p>✅ <span class="lang-hi-inline">हम आपकी जानकारी कभी भी किसी तीसरे पक्ष को बेचते या व्यावसायिक उद्देश्यों के लिए साझा नहीं करते।</span><span class="lang-gu-inline">અમે તમારી માહિતી ક્યારેય કોઈ ત્રીજા પક્ષને વેચતા કે વ્યાવસાયિક ઉદ્દેશ્યો માટે શેર કરતા નથી.</span><span class="lang-en-inline">We never sell or share your information with any third party for commercial purposes.</span></p>
+                </div>
+            </div>
+
+            <!-- P3. Cookies -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">कुकीज़ एवं ट्रैकिंग</span>
+                        <span class="lang-gu">Cookies અને ટ્રેકિંગ</span>
+                        <span class="lang-en">Cookies & Tracking</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">हमारी वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है। इनमें शामिल हैं:</p>
+                <p class="lang-gu">અમારી વેબસાઇટ તમારા અનુભવને બહેતર બનાવવા માટે Cookies નો ઉપયોગ કરે છે. આમાં સામેલ છે:</p>
+                <p class="lang-en">Our website uses cookies to improve your experience. These include:</p>
+                <ol>
+                    <li><span class="lang-hi-inline">आवश्यक कुकीज़ — वेबसाइट के सामान्य संचालन हेतु</span><span class="lang-gu-inline">જરૂરી Cookies — વેબસાઇટના સામાન્ય સંચાલન માટે</span><span class="lang-en-inline">Essential cookies — for normal website operation</span></li>
+                    <li><span class="lang-hi-inline">भाषा प्राथमिकता कुकी — हिंदी/गुजराती/अंग्रेजी चयन याद रखने हेतु</span><span class="lang-gu-inline">ભાષા પસંદગી Cookie — હિન્દી/ગુજરાતી/અંગ્રેજી પસંદગી યાદ રાખવા માટે</span><span class="lang-en-inline">Language preference cookie — to remember Hindi/Gujarati/English selection</span></li>
+                    <li><span class="lang-hi-inline">Google Analytics — वेबसाइट विश्लेषण हेतु (अनामिकृत डेटा)</span><span class="lang-gu-inline">Google Analytics — વેબસાઇટ વિશ્લેષણ માટે (અનામી ડેટા)</span><span class="lang-en-inline">Google Analytics — for website analytics (anonymized data)</span></li>
+                </ol>
+                <p class="lang-hi">आप अपने ब्राउज़र सेटिंग्स में जाकर कुकीज़ को अस्वीकार कर सकते हैं, परंतु इससे कुछ वेबसाइट सुविधाएं प्रभावित हो सकती हैं।</p>
+                <p class="lang-gu">તમે તમારા browser settings માં જઈને Cookies નકારી શકો છો, પરંતુ આનાથી કેટલીક વેબસાઇટ સુવિધાઓ પ્રભાવિત થઈ શકે છે.</p>
+                <p class="lang-en">You can reject cookies by going to your browser settings, but this may affect some website features.</p>
+            </div>
+
+            <!-- P4. Data Security -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">4</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">डेटा सुरक्षा</span>
+                        <span class="lang-gu">ડેટા સુરક્ષા</span>
+                        <span class="lang-en">Data Security</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">आपकी व्यक्तिगत जानकारी की सुरक्षा हमारी प्राथमिकता है। हम SSL एन्क्रिप्शन, सुरक्षित पेमेंट गेटवे एवं सीमित पहुँच नियंत्रण का उपयोग करते हैं। हमारे सर्वर भारत में स्थित हैं और सभी डेटा भारतीय डेटा संरक्षण कानूनों के अनुरूप संग्रहीत किया जाता है।</p>
+                <p class="lang-gu">તમારી વ્યક્તિગત માહિતીની સુરક્ષા અમારી પ્રાથમિકતા છે. અમે SSL encryption, સુરક્ષિત પેમેન્ટ ગેટવે અને સીમિત પહોંચ નિયંત્રણનો ઉપયોગ કરીએ છીએ. અમારા સર્વર ભારતમાં છે અને તમામ ડેટા ભારતીય ડેટા સુરક્ષા કાયદા હેઠળ સુરક્ષિત રાખવામાં આવે છે.</p>
+                <p class="lang-en">The security of your personal information is our priority. We use SSL encryption, secure payment gateways, and limited access controls. Our servers are located in India and all data is stored in compliance with Indian data protection laws.</p>
+            </div>
+
+            <!-- P5. Your Rights -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">5</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">आपके अधिकार</span>
+                        <span class="lang-gu">તમારા અધિકારો</span>
+                        <span class="lang-en">Your Rights</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">भारतीय सूचना प्रौद्योगिकी अधिनियम एवं व्यक्तिगत डेटा संरक्षण के अंतर्गत आपके निम्न अधिकार हैं:</p>
+                <p class="lang-gu">ભારતીય માહિતી ટેકનોલોજી અધિનિયમ અને વ્યક્તિગત ડેટા સુરક્ષા અંતર્ગત તમારા નીચેના અધિકારો છે:</p>
+                <p class="lang-en">Under the Indian Information Technology Act and personal data protection, you have the following rights:</p>
+                <ol>
+                    <li><span class="lang-hi-inline">अपनी जानकारी तक पहुँचने का अधिकार</span><span class="lang-gu-inline">પોતાની માહિતી મેળવવાનો અધિકાર</span><span class="lang-en-inline">Right to access your information</span></li>
+                    <li><span class="lang-hi-inline">गलत जानकारी सुधरवाने का अधिकार</span><span class="lang-gu-inline">ખોટી માહિતી સુધારવાનો અધિકાર</span><span class="lang-en-inline">Right to correct inaccurate information</span></li>
+                    <li><span class="lang-hi-inline">मार्केटिंग संचार से ऑप्ट-आउट करने का अधिकार</span><span class="lang-gu-inline">Marketing સંચારમાંથી opt-out કરવાનો અધિકાર</span><span class="lang-en-inline">Right to opt-out of marketing communications</span></li>
+                    <li><span class="lang-hi-inline">डेटा हटाने का अनुरोध करने का अधिकार (कानूनी आवश्यकताओं के अधीन)</span><span class="lang-gu-inline">ડેટા હટાવવાની વિનંતી કરવાનો અધિકાર (કાનૂની જરૂરિયાતોને આધીન)</span><span class="lang-en-inline">Right to request data deletion (subject to legal requirements)</span></li>
+                </ol>
+                <p class="lang-hi">इन अधिकारों का प्रयोग करने हेतु कृपया हमसे संपर्क करें।</p>
+                <p class="lang-gu">આ અધિકારોનો ઉપયોગ કરવા માટે કૃપા કરીને અમારો સંપર્ક કરો.</p>
+                <p class="lang-en">To exercise these rights, please contact us.</p>
+            </div>
+
+            <!-- P6. Third Party Links -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">6</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">तृतीय पक्ष लिंक</span>
+                        <span class="lang-gu">ત્રીજા પક્ષ ની લિંક્સ</span>
+                        <span class="lang-en">Third Party Links</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">हमारी वेबसाइट पर Google Maps, YouTube, Instagram, Facebook एवं WhatsApp जैसी तृतीय पक्ष सेवाओं के लिंक हो सकते हैं। इन सेवाओं की अपनी स्वतंत्र गोपनीयता नीतियाँ हैं। हम उनकी नीतियों एवं डेटा प्रथाओं के लिए उत्तरदायी नहीं हैं। हम आपसे अनुरोध करते हैं कि इन सेवाओं का उपयोग करने से पूर्व उनकी गोपनीयता नीतियाँ अवश्य पढ़ें।</p>
+                <p class="lang-gu">અમારી વેબસાઇટ પર Google Maps, YouTube, Instagram, Facebook અને WhatsApp જેવી અન્ય વેબસાઇટ્સ ની લિંક્સ હોઈ શકે છે. આ સેવાઓની પોતાની સ્વતંત્ર ગોપનીયતા નીતિઓ છે. અમે તેમની નીતિઓ માટે જવાબદાર નથી.</p>
+                <p class="lang-en">Our website may contain links to third-party services like Google Maps, YouTube, Instagram, Facebook, and WhatsApp. These services have their own independent privacy policies. We are not responsible for their policies and data practices. We request you to read their privacy policies before using these services.</p>
+            </div>
+
+            <!-- P7. Policy Changes -->
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-number">7</span>
+                    <h2 class="section-title">
+                        <span class="lang-hi">नीति में परिवर्तन</span>
+                        <span class="lang-gu">નીતિમાં ફેરફાર</span>
+                        <span class="lang-en">Changes to Policy</span>
+                    </h2>
+                </div>
+                <p class="lang-hi">जय बाबा रामदेव गौसेवा समिति समय-समय पर इस गोपनीयता नीति को अद्यतन कर सकती है। किसी भी महत्वपूर्ण परिवर्तन की सूचना वेबसाइट पर दी जाएगी। इस पृष्ठ पर "अंतिम अद्यतन" तिथि सदैव वर्तमान संस्करण को दर्शाती है। हम आपसे अनुरोध करते हैं कि आप नियमित रूप से इस नीति की समीक्षा करें।</p>
+                <p class="lang-gu">જય બાબા રામદેવ ગૌસેવા સમિતિ સમય-સમય પર આ ગોપનીયતા નીતિ અપડેટ કરી શકે છે. કોઈ પણ ફેરફારની સૂચના વેબસાઇટ પર આપવામાં આવશે. આ પૃષ્ઠ પર "છેલ્લો સુધારો" તારીખ હંમેશા વર્તમાન સંસ્કરણ દર્શાવે છે.</p>
+                <p class="lang-en">Jai Baba Ramdev Gauseva Samiti may update this privacy policy from time to time. Notice of any significant changes will be provided on the website. The "Last Updated" date on this page always reflects the current version. We request you to review this policy regularly.</p>
+            </div>
+
+            <!-- Contact for Privacy -->
+            <div class="contact-card">
+                <h3>🔒 <span class="lang-hi-inline">गोपनीयता संबंधी प्रश्न</span><span class="lang-gu-inline">ગોપનીયતા સંબંધી પ્રશ્નો</span><span class="lang-en-inline">Privacy Related Queries</span></h3>
+                <p><span class="lang-hi-inline">यदि आपकी जानकारी के उपयोग या गोपनीयता नीति के बारे में कोई प्रश्न हो:</span><span class="lang-gu-inline">જો તમારી માહિતીના ઉપયોગ કે ગોપનીયતા નીતિ વિશે કોઈ પ્રશ્ન હોય:</span><span class="lang-en-inline">For any questions about your information or this privacy policy:</span></p>
+                <p style="margin-top:10px;color:rgba(255,255,255,0.45);font-size:0.82rem;">
+                    <span class="lang-hi-inline">जय बाबा रामदेव गौसेवा समिति, गौशाला रामदेवरा, पोखरण, जैसलमेर, राजस्थान</span>
+                    <span class="lang-gu-inline">જય બાબા રામદેવ ગૌસેવા સમિતિ, ગૌશાળા રામદેવરા, પોખરણ, જેસલમેર, રાજસ્થાન</span>
+                    <span class="lang-en-inline">Jai Baba Ramdev Gauseva Samiti, Gaushala Ramdevra, Pokaran, Jaisalmer, Rajasthan</span>
+                </p>
+                <div style="margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center;">
+                    <a href="tel:+919414287654" class="contact-item">📞 +91 94142 87654</a>
+                    <a href="https://www.instagram.com/ramdevra_gaushala/" class="contact-item" target="_blank">📸 Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61590324281845" class="contact-item" target="_blank">📘 Facebook</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="name lang-hi">जय बाबा रामदेव गौसेवा समिति</span>
+                    <span class="name lang-gu">જય બાબા રામદેવ ગૌસેવા સમિતિ</span>
+                    <span class="name lang-en">Jai Baba Ramdev Gauseva Samiti</span>
+                    <span class="tagline lang-hi">गौशाला रामदेवरा, राजस्थान</span>
+                    <span class="tagline lang-gu">ગૌશાળા રામદેવરા, રાજસ્થાન</span>
+                    <span class="tagline lang-en">Gaushala Ramdevra, Rajasthan</span>
+                </div>
+                <p class="lang-hi">गौ माता सेवा, संरक्षण और पारदर्शिता के मिशन पर समर्पित। बाबा रामदेव जी की पावन भूमि रामदेवरा से संचालित। पंजीकृत NGO | 80G प्रमाणित।</p>
+                <p class="lang-gu">ગૌમાતા સેવા, સંરક્ષણ અને પારદર્શિતાના મિશન પર સમર્પિત. બાબા રામદેવજીની પવિત્ર ભૂમિ રામદેવરાથી સંચાલિત. રજીસ્ટર્ડ NGO | 80G પ્રમાણિત.</p>
+                <p class="lang-en">Dedicated to the mission of Gau Mata service, protection, and transparency. Registered NGO | 80G Certified.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/ramdevra_gaushala/" target="_blank" title="Instagram">📸</a>
+                    <a href="https://www.facebook.com/profile.php?id=61590324281845" target="_blank" title="Facebook">📘</a>
+                    <a href="https://www.youtube.com/@ramdevra_gaushala" target="_blank" title="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4><span class="lang-hi">त्वरित लिंक</span><span class="lang-gu">ઝડપી લિંક્સ</span><span class="lang-en">Quick Links</span></h4>
+                <ul>
+                    <li><a href="index.html"><span class="lang-hi-inline">होम पेज</span><span class="lang-gu-inline">હોમ પેજ</span><span class="lang-en-inline">Home Page</span></a></li>
+                    <li><a href="about.html"><span class="lang-hi-inline">हमारे बारे में</span><span class="lang-gu-inline">અમારા વિશે</span><span class="lang-en-inline">About Us</span></a></li>
+                    <li><a href="Our_Work.html"><span class="lang-hi-inline">हमारे कार्य</span><span class="lang-gu-inline">અમારા કાર્યો</span><span class="lang-en-inline">Our Work</span></a></li>
+                    <li><a href="transprancy.html"><span class="lang-hi-inline">पारदर्शिता</span><span class="lang-gu-inline">પારદર્શિતા</span><span class="lang-en-inline">Transparency</span></a></li>
+                    <li><a href="contact.html"><span class="lang-hi-inline">संपर्क करें</span><span class="lang-gu-inline">સંપર્ક કરો</span><span class="lang-en-inline">Contact Us</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><span class="lang-hi">नियम व नीतियां</span><span class="lang-gu">નિયમો અને નીતિઓ</span><span class="lang-en">Terms & Policies</span></h4>
+                <ul>
+                    <li>
+                        <a href="terms.html#terms">
+                            <span class="lang-hi-inline">📜 नियम और शर्तें</span>
+                            <span class="lang-gu-inline">📜 નિયમો અને શરતો</span>
+                            <span class="lang-en-inline">📜 Terms & Conditions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="terms.html#privacy">
+                            <span class="lang-hi-inline">🔒 गोपनीयता नीति</span>
+                            <span class="lang-gu-inline">🔒 ગોપનીયતા નીતિ</span>
+                            <span class="lang-en-inline">🔒 Privacy Policy</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>
+                <span class="lang-hi-inline">© 2025 गौशाला रामदेवरा। सर्वाधिकार सुरक्षित। 🕉️ पंजीकृत NGO | 80G प्रमाणित</span>
+                <span class="lang-gu-inline">© 2025 ગૌશાળા રામદેવરા. સર્વાધિકાર સુરક્ષિત. 🕉️ રજિસ્ટર્ડ NGO | 80G પ્રમાણિત</span>
+                <span class="lang-en-inline">© 2025 Gaushala Ramdevra. All Rights Reserved. 🕉️ Registered NGO | 80G Certified</span>
+            </span>
+            <span>
+                <span class="lang-hi-inline">🧡 गौ माता सेवा हेतु निर्मित</span>
+                <span class="lang-gu-inline">ગૌમાતા સેવા માટે 🧡 સાથે બનાવેલ</span>
+                <span class="lang-en-inline">Made with 🧡 for Gau Mata Seva</span>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle
+        function setLang(lang) {
+            document.documentElement.setAttribute('data-lang', lang);
+            ['hi','en','gu'].forEach(l => {
+                const btn = document.getElementById('btn-'+l);
+                if (btn) btn.classList.toggle('active', l === lang);
+            });
+            localStorage.setItem('gaushala-lang', lang);
+            const langNames = { hi: 'हिंदी', gu: 'ગુજરાતી', en: 'English' };
+            const btnText = document.querySelector('.current-lang-text');
+            if (btnText) btnText.textContent = langNames[lang];
+        }
+
+        function toggleCustomLangDropdown(event) {
+            event.stopPropagation();
+            const options = document.querySelector('.custom-lang-options');
+            if (options) options.classList.toggle('show');
+        }
+        function changeLangCustom(lang) {
+            setLang(lang);
+            const options = document.querySelector('.custom-lang-options');
+            if (options) options.classList.remove('show');
+        }
+        document.addEventListener('click', function() {
+            const options = document.querySelector('.custom-lang-options');
+            if (options) options.classList.remove('show');
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        }
+
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+            window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop - 80, behavior: 'smooth' });
+        }
+
+        // Restore saved language
+        const savedLang = localStorage.getItem('gaushala-lang') || 'hi';
+        setLang(savedLang);
+
+        // Hash Routing logic
+        function handleHashRouting() {
+            const hash = window.location.hash;
+            if (hash === '#privacy') {
+                const privacyBtn = document.querySelector('.tab-btn[onclick*="privacy"]');
+                if (privacyBtn) switchTab('privacy', privacyBtn);
+            } else {
+                const termsBtn = document.querySelector('.tab-btn[onclick*="terms"]');
+                if (termsBtn) switchTab('terms', termsBtn);
+            }
+        }
+
+        window.addEventListener('hashchange', handleHashRouting);
+        handleHashRouting();
+    </script>
+</body>
+</html>
